@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "999807685019",
+    "firebase_url": "https://yallabee3-2d5ba.firebaseio.com",
+    "project_id": "yallabee3-2d5ba",
+    "storage_bucket": "yallabee3-2d5ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999807685019:android:d4b06fcd0c1a34b4",
+        "android_client_info": {
+          "package_name": "com.example.yallabee3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999807685019-esh65qob8kpb7bopabunraa5tjsv7rm1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yallabee3",
+            "certificate_hash": "225e3884c5ce260f9edb97ed2bc3445a130e7e8e"
+          }
+        },
+        {
+          "client_id": "999807685019-b3dleslau879u159geatnfolja5ega65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJIMwLytQk-jhVJmekWudyi68TKmkYkUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999807685019-b3dleslau879u159geatnfolja5ega65.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

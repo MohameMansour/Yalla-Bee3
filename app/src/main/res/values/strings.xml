@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<resources>
+
+    <string name="app_name">Yalla Bee3</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="add">Add</string>
+    <string name="profile">Profile</string>
+    <string name="image_icon">Image Icon</string>
+    <string name="category">Category</string>
+
+    <string-array name="categories">
+        <item>Cars</item>
+        <item>Mobiles</item>
+        <item>Laptop</item>
+        <item>Electonics</item>
+        <item>Furnitures</item>
+        <item>Building</item>
+        <item>Bike</item>
+        <item>Clothes</item>
+        <item>Others..</item>
+    </string-array>
+
+</resources>

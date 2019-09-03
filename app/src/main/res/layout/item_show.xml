@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="160dp"
+    android:layout_margin="8dp"
+    android:background="@color/colorWhite"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/product_info_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/driver_info_name_view_textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingBottom="4dp"-->
+        <!--android:text="Title : "-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/product_info_img_view" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/product_info_location_view_textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingBottom="4dp"-->
+        <!--android:text="Price : "-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/driver_info_name_view_textView"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/driver_info_name_view_textView" />-->
+
+        <ImageView
+            android:id="@+id/product_info_location_view_textView"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:src="@drawable/cash"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_info_name_textView" />
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/driver_info_email_view_textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingBottom="4dp"-->
+        <!--android:text="Location : "-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/product_info_location_view_textView"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/product_info_location_view_textView"-->
+        <!--tools:layout_editor_absoluteY="219dp" />-->
+
+        <ImageView
+            android:id="@+id/driver_info_email_view_textView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:src="@drawable/location"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="@+id/product_info_location_view_textView"
+            app:layout_constraintTop_toBottomOf="@+id/product_info_location_view_textView"
+            tools:layout_editor_absoluteY="219dp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/driver_info_driver_id_view_textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingBottom="4dp"-->
+        <!--android:text="Email : "-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/driver_info_email_view_textView"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/driver_info_email_view_textView"-->
+        <!--tools:layout_editor_absoluteY="219dp" />-->
+
+
+        <TextView
+            android:id="@+id/product_info_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_info_img_view" />
+
+
+        <TextView
+            android:id="@+id/product_info_des_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="30dp"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/product_info_name_textView"
+            app:layout_constraintTop_toBottomOf="@id/product_info_name_textView" />
+
+        <TextView
+            android:id="@+id/driver_info_price_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintStart_toStartOf="@+id/product_info_des_textView"
+            app:layout_constraintTop_toBottomOf="@+id/product_info_des_textView" />
+
+        <TextView
+            android:id="@+id/driver_info_location_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintStart_toStartOf="@+id/driver_info_price_textView"
+            app:layout_constraintTop_toBottomOf="@+id/driver_info_price_textView" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/driver_info_driver_id_textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--android:paddingBottom="4dp"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/driver_info_email_textView"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/driver_info_email_textView" />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
