@@ -11,15 +11,138 @@
     <string name="category">Category</string>
 
     <string-array name="categories">
-        <item>Cars</item>
-        <item>Mobiles</item>
-        <item>Laptop</item>
-        <item>Electonics</item>
-        <item>Furnitures</item>
-        <item>Building</item>
-        <item>Bike</item>
-        <item>Clothes</item>
-        <item>Others..</item>
+        <item>Vehicles</item>
+        <item>Properties</item>
+        <item>Mobile Phones, Accessories</item>
+        <item>Electronics, Home Appliances</item>
+        <item>Home, Garden</item>
+        <item>Fashion, Beauty</item>
+        <item>Pets</item>
+        <item>Kids, Babies</item>
+        <item>Sporting Goods, Bikes</item>
+        <item>Hobbies, Music, Art, Books</item>
+        <item>Jobs</item>
+        <item>Business, Industrial</item>
+        <item>Services</item>
     </string-array>
 
+    <string-array name="subcategories_vehicles">
+        <item>Boats</item>
+        <item>Car Accessories</item>
+        <item>Cars</item>
+        <item>Motorcycles</item>
+        <item>Other Vehicles</item>
+        <item>Spare parts</item>
+        <item>Trucks, buses</item>
+    </string-array>
+
+
+    <string-array name="subcategories_Properties">
+        <item>Properties for Rent</item>
+        <item>Properties for Sale</item>
+    </string-array>
+
+    <string-array name="subcategories_mobilephone_accessories">
+        <item>Mobile Phones</item>
+        <item>Mobile Accessories</item>
+    </string-array>
+
+    <string-array name="subcategories_Electronics_HomeAppliances">
+        <item>TV - Audio - Video</item>
+        <item>Computers - Tablets</item>
+        <item>Video games - Consoles</item>
+        <item>Cameras - Imaging</item>
+        <item>Home Appliances</item>
+
+    </string-array>
+
+    <string-array name="subcategories_Home_Garden">
+        <item>Decoration - Accessories</item>
+        <item>Furniture</item>
+        <item>Garden - Outdoor</item>
+        <item>Kitchenware</item>
+        <item>Other Home - Garden</item>
+    </string-array>
+
+    <string-array name="subcategories_Fashion_Beauty">
+        <item>Clothing - Accessories</item>
+        <item>Jewelry - Watches</item>
+        <item>Health - Beauty - Cosmetics</item>
+    </string-array>
+
+    <string-array name="subcategories_Pets">
+        <item>Cats</item>
+        <item>Dogs</item>
+        <item>Horses</item>
+        <item>Fishes</item>
+        <item>Birds</item>
+        <item>Other Pets</item>
+    </string-array>
+
+    <string-array name="subcategories_Kids_Babies">
+        <item>Clothes for Kids and Babies</item>
+        <item>Toys</item>
+        <item>Cribs - Strollers</item>
+        <item>Accessories</item>
+        <item>Other Kids - Babies</item>
+    </string-array>
+
+    <string-array name="subcategories_Sporting_Goods_Bikes">
+        <item>Sporting Goods</item>
+        <item>Bikes</item>
+        <item>Outdoor Equipment</item>
+    </string-array>
+
+    <string-array name="subcategories_Hobbies_Music_Art_Books">
+        <item>Antiques - Collectibles</item>
+        <item>Books</item>
+        <item>Movies - Music</item>
+        <item>Musical instruments</item>
+        <item>Other items</item>
+        <item>Study tools</item>
+        <item>Tickets - Vouchers</item>
+    </string-array>
+
+    <string-array name="subcategories_Jobs">
+        <item>Accounting</item>
+        <item>Architecture - Engineering</item>
+        <item>Art - Design</item>
+        <item>Business Development</item>
+        <item>Construction</item>
+        <item>Consulting</item>
+        <item>Education</item>
+        <item>Executive</item>
+        <item>HR - Recruiting</item>
+        <item>Hospitality</item>
+        <item>IT - Telecom</item>
+        <item>Jobs Wanted</item>
+        <item>Marketing - PR</item>
+        <item>Medical - Health</item>
+        <item>Other</item>
+        <item>Retail</item>
+        <item>Sales</item>
+        <item>Secretarial</item>
+    </string-array>
+
+    <string-array name="subcategories_Business_Industrial">
+        <item>Factories Equipment</item>
+        <item>Medical Equipment</item>
+        <item>Heavy Equipment</item>
+        <item>Restaurants Equipment</item>
+        <item>Shops Liquidation</item>
+        <item>Other Business - Industrial</item>
+    </string-array>
+
+    <string-array name="subcategories_Services">
+        <item>Business Services</item>
+        <item>Car Repairs</item>
+        <item>Domestic Services</item>
+        <item>Events</item>
+        <item>Home</item>
+        <item>Movers</item>
+        <item>Other Services</item>
+        <item>Personal Services</item>
+        <item>Pets</item>
+        <item>Private Tutors</item>
+    </string-array>
 </resources>

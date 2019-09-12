@@ -30,31 +30,41 @@
 
     <ImageView
         android:id="@+id/product_details_imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="300dp"
-        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user_img" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_details_imageView">
 
     <TextView
         android:id="@+id/product_details_name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="22dp"
+        android:layout_weight="1"
         android:text="Name Of Product"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/product_details_imageView" />
 
-    <TextView
-        android:id="@+id/product_details_desc_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="22dp"
-        android:text="Description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_details_name_textview" />
+        <ImageView
+            android:id="@+id/favourite_product_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:src="@drawable/favourites" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/product_details_price_textview"
@@ -63,7 +73,16 @@
         android:padding="22dp"
         android:text="Price"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_details_desc_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+    <TextView
+        android:id="@+id/product_details_desc_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="22dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_details_price_textview" />
 
     <TextView
         android:id="@+id/product_details_location_textview"
@@ -72,17 +91,17 @@
         android:padding="22dp"
         android:text="Phone Number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_details_price_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/product_details_desc_textview" />
 
     <LinearLayout
         android:id="@+id/user_profile_add_product_linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBackSpace"
-        android:padding="4dp"
         android:layout_marginTop="8dp"
-        android:orientation="vertical"
+        android:background="@color/colorBackSpace"
         android:gravity="center"
+        android:orientation="vertical"
+        android:padding="4dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,9 +117,20 @@
             android:id="@+id/product_user_name_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="User Of Product"
-            />
+            android:text="User Of Product" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/report_product_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Report This Product!!"
+        android:textColor="@color/colorRed"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_add_product_linear" />
 
     <LinearLayout
         android:id="@+id/linear_product_datails"

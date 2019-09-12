@@ -1,6 +1,9 @@
 package com.example.yallabee3.activities;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.icu.util.Calendar;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.yallabee3.R;
 import com.example.yallabee3.adapt_hold.adapter.MessageAdapter;
+import com.example.yallabee3.model.Chats;
 import com.example.yallabee3.model.Message;
 import com.example.yallabee3.model.User;
 import com.example.yallabee3.notifications.APIService;
@@ -35,8 +39,11 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -70,7 +77,7 @@ public class ChatActivity extends AppCompatActivity {
     MessageAdapter adapter;
 
     String image;
-    String anotheruserIdInChat;
+    String anotheruserIdInChat, productId;
     String myId;
 
     FirebaseAuth firebaseAuth;
@@ -78,6 +85,9 @@ public class ChatActivity extends AppCompatActivity {
     DatabaseReference usersDbRef;
     APIService apiService;
     boolean notify = false;
+
+    FirebaseDatabase database;
+    DatabaseReference databaseReference;
 
     @Override
 
@@ -88,6 +98,9 @@ public class ChatActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         toolbar.setTitle("");
+
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
@@ -103,6 +116,7 @@ public class ChatActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
         anotheruserIdInChat = i.getExtras().getString("userId_key");
+        productId = i.getExtras().getString("productId_key");
         Toast.makeText(this, anotheruserIdInChat, Toast.LENGTH_SHORT).show();
 
         Query userquery = usersDbRef.orderByChild("userId").equalTo(anotheruserIdInChat);
@@ -139,6 +153,20 @@ public class ChatActivity extends AppCompatActivity {
         super.onStart();
     }
 
+//    @Override
+//    public void onBackPressed() {
+//
+////        Intent i = new Intent(this, ChatFragment.class);
+////        i.putExtra("productId_key", productId);
+////        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+////        startActivity(i);
+//
+////        ChatFragment fragmentB = new ChatFragment();
+////        Bundle bundle = new Bundle();
+////        bundle.putString("NAME", productId);
+////        fragmentB.setArguments(bundle);
+//
+//    }
 
     private void checkUserStatus() {
         FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -170,7 +198,9 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void seenMessage() {
-        userRefForSeen = FirebaseDatabase.getInstance().getReference("Chat");
+        userRefForSeen = FirebaseDatabase.getInstance().getReference("Chating");
+//        userRefForSeen = FirebaseDatabase.getInstance().getReference("Products").child(productId).child("Chat");
+
         seenListener = userRefForSeen.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -190,11 +220,16 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void readMessage() {
 
-        DatabaseReference dbref = FirebaseDatabase.getInstance().getReference("Chat");
+        DatabaseReference dbref = FirebaseDatabase.getInstance().getReference("Chating");
+//        DatabaseReference dbref = FirebaseDatabase.getInstance().getReference("Chat").child(productId);
+
+//        DatabaseReference dbref = FirebaseDatabase.getInstance().getReference("Products").child(productId).child("Chat");
+
         dbref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -205,7 +240,9 @@ public class ChatActivity extends AppCompatActivity {
                             && message.getSender().equals(anotheruserIdInChat) ||
                             message.getReceiver().equals(anotheruserIdInChat)
                                     && message.getSender().equals(myId)) {
-                        messages.add(message);
+                        if(message.getProductId().equals(productId))
+                        {
+                        messages.add(message);}
                     }
 
                     adapter = new MessageAdapter(messages, ChatActivity.this, image);
@@ -222,6 +259,7 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
+    @TargetApi(Build.VERSION_CODES.N)
     private void sendMessage(String message) {
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -235,8 +273,10 @@ public class ChatActivity extends AppCompatActivity {
 
 //        HashMap<String, Object> hashMap = new HashMap<>;
         boolean isSeen = false;
-        Message message1 = new Message(Id, message, myId, anotheruserIdInChat, isSeen);
-        databaseReference.child("Chat").child(Id).setValue(message1);
+        Message message1 = new Message(Id, message, myId, anotheruserIdInChat, isSeen, productId);
+        databaseReference.child("Chating").child(Id).setValue(message1);
+
+//        databaseReference.child("Products").child(productId).child("Chat").child(Id).setValue(message1);
 
         String msg = message;
         DatabaseReference database = FirebaseDatabase.getInstance().getReference("User").child(myId);
@@ -256,6 +296,31 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
+
+        String totaltime = null;
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat gethour = new SimpleDateFormat("HH");
+        SimpleDateFormat getminute = new SimpleDateFormat("mm");
+        String hour = gethour.format(c.getTime());
+        String minute = getminute.format(c.getTime());
+        int convertedVal = Integer.parseInt(hour);
+
+        if (convertedVal > 12) {
+            totaltime = ((convertedVal - 12) + ":" + (minute) + "pm");
+        } else if (convertedVal == 12) {
+            totaltime = ("12" + ":" + (minute) + "pm");
+        } else if (convertedVal < 12) {
+            if (convertedVal != 0) {
+                totaltime = ((convertedVal) + ":" + (minute) + "am");
+            } else {
+                totaltime = ("12" + ":" + minute + "am");
+            }
+        }
+        //
+        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+
+        Chats sponsor = new Chats(Id,productId,myId,anotheruserIdInChat,date_n ,totaltime);
+        databaseReference.child("Chats").child(productId).setValue(sponsor);
     }
 
     private void sendNotification(String anotheruserIdInChat, String fullName, String message) {
@@ -273,7 +338,7 @@ public class ChatActivity extends AppCompatActivity {
                     apiService.sendNotification(sender).enqueue(new Callback<Response>() {
                         @Override
                         public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
-                            Toast.makeText(ChatActivity.this, ""+response.message(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ChatActivity.this, "" + response.message(), Toast.LENGTH_SHORT).show();
                         }
 
                         @Override

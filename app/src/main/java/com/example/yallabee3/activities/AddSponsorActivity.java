@@ -1,12 +1,14 @@
 package com.example.yallabee3.activities;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.icu.util.Calendar;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.yallabee3.R;
-import com.example.yallabee3.model.Product;
+import com.example.yallabee3.model.Sponsor;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +33,11 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import java.util.Date;
+
+//import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 import java.util.UUID;
 
 import butterknife.BindView;
@@ -48,10 +55,15 @@ public class AddSponsorActivity extends AppCompatActivity {
     EditText addsponsorDescEdittext;
     @BindView(R.id.addsponsor_price_edittext)
     EditText addsponsorPriceEdittext;
+    @BindView(R.id.addsponsor_phone_edittext)
+    EditText addsponsorPhoneEdittext;
+    @BindView(R.id.addsponsor_location_edittext)
+    EditText addsponsorLocationEdittext;
+
     @BindView(R.id.addsponsor_button)
     Button addsponsorButton;
 
-    private String title, description, price;
+    private String title, description, price, phone, location;
     private Uri photoUri;
 
     private ProgressDialog progressDialog;
@@ -75,6 +87,7 @@ public class AddSponsorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_sponsor);
         ButterKnife.bind(this);
     }
+
     public void checkAndroidVersion() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             try {
@@ -142,6 +155,8 @@ public class AddSponsorActivity extends AppCompatActivity {
         title = addsponsorTitleEdittext.getText().toString();
         description = addsponsorDescEdittext.getText().toString().trim();
         price = addsponsorPriceEdittext.getText().toString().trim();
+        phone = addsponsorPhoneEdittext.getText().toString().trim();
+        location = addsponsorLocationEdittext.getText().toString().trim();
         return true;
     }
 
@@ -167,14 +182,14 @@ public class AddSponsorActivity extends AppCompatActivity {
 //
 //    }
 
-    private void saveUser( final Uri uri) {
+    private void saveUser(final Uri uri) {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Please Wait ....");
         progressDialog.show();
 
         FirebaseDatabase fb_db_instance = FirebaseDatabase.getInstance();
         DatabaseReference db_ref_Main = fb_db_instance.getReference();
-        DatabaseReference blankRecordReference = db_ref_Main ;
+        DatabaseReference blankRecordReference = db_ref_Main;
         DatabaseReference db_ref = blankRecordReference.push();
         String Id = db_ref.getKey();
 
@@ -189,16 +204,42 @@ public class AddSponsorActivity extends AppCompatActivity {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 storageReference.child("Sponsor").child("Images").child(Id + "/" + imageName).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @TargetApi(Build.VERSION_CODES.N)
                     @Override
                     public void onSuccess(Uri uri) {
                         database = FirebaseDatabase.getInstance();
                         databaseReference = database.getReference();
                         String downUrl = uri.toString();
-                        Product product = new Product(Id, title, description, price, downUrl);
-                        databaseReference.child("Sponsor").child(Id).setValue(product);
+                        //
+                        String totaltime = null;
+                        Calendar c = Calendar.getInstance();
+                        SimpleDateFormat gethour = new SimpleDateFormat("HH");
+                        SimpleDateFormat getminute = new SimpleDateFormat("mm");
+                        String hour = gethour.format(c.getTime());
+                        String minute = getminute.format(c.getTime());
+                        int convertedVal = Integer.parseInt(hour);
+
+                        if (convertedVal > 12) {
+                            totaltime = ((convertedVal - 12) + ":" + (minute) + "pm");
+                        } else if (convertedVal == 12) {
+                            totaltime = ("12" + ":" + (minute) + "pm");
+                        } else if (convertedVal < 12) {
+                            if (convertedVal != 0) {
+                                totaltime = ((convertedVal) + ":" + (minute) + "am");
+                            } else {
+                                totaltime = ("12" + ":" + minute + "am");
+                            }
+                        }
+                        //
+                        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+
+                        //
+                        Sponsor sponsor = new Sponsor(Id, title, description, price, downUrl, phone, location, date_n);
+                        databaseReference.child("Sponsor").child(Id).setValue(sponsor);
                         // Missing code
                         Toast.makeText(AddSponsorActivity.this, "Added", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(AddSponsorActivity.this , ShowActivity.class);
+                        Intent i = new Intent(AddSponsorActivity.this, NavActivity
+                                .class);
                         startActivity(i);
                         finish();
                     }

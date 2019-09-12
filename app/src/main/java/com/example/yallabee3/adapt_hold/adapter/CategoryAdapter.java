@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.yallabee3.R;
-import com.example.yallabee3.activities.ShowActivity;
+import com.example.yallabee3.activities.ShowSubActivity;
 import com.example.yallabee3.adapt_hold.holder.CategoryHolder;
 import com.example.yallabee3.model.Categery;
 import com.squareup.picasso.Picasso;
@@ -54,7 +54,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryHolder> {
 
         holder.itemView.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getContext(), ShowActivity.class);
+//    true        Intent intent = new Intent(getContext(), ShowActivity.class);
+            Intent intent = new Intent(getContext(), ShowSubActivity.class);
+
 
             String name = categery.getName();
 

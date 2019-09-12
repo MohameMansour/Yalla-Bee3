@@ -16,13 +16,13 @@
         <ImageView
             android:id="@+id/product_info_img_view"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="90dp"
             android:scaleType="fitXY"
+            android:adjustViewBounds="true"
             android:src="@drawable/user_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <!--<TextView-->
         <!--android:id="@+id/driver_info_name_view_textView"-->
@@ -54,11 +54,11 @@
         <ImageView
             android:id="@+id/product_info_location_view_textView"
             android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:paddingStart="8dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp"
+            android:layout_height="20dp"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
             android:src="@drawable/cash"
             android:textColor="@color/colorBlack"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,16 +82,16 @@
         <ImageView
             android:id="@+id/driver_info_email_view_textView"
             android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:paddingStart="8dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp"
+            android:layout_height="20dp"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
             android:src="@drawable/location"
             android:textColor="@color/colorBlack"
             app:layout_constraintStart_toStartOf="@+id/product_info_location_view_textView"
             app:layout_constraintTop_toBottomOf="@+id/product_info_location_view_textView"
-            tools:layout_editor_absoluteY="219dp" />
+             />
 
         <!--<TextView-->
         <!--android:id="@+id/driver_info_driver_id_view_textView"-->
@@ -116,10 +116,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="2dp"
-            android:paddingStart="8dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_info_img_view" />
 
@@ -128,12 +128,11 @@
             android:id="@+id/product_info_des_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="30dp"
-            android:paddingStart="8dp"
-            android:paddingTop="8dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/product_info_name_textView"
             app:layout_constraintTop_toBottomOf="@id/product_info_name_textView" />
@@ -143,10 +142,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:paddingStart="8dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
             app:layout_constraintStart_toStartOf="@+id/product_info_des_textView"
             app:layout_constraintTop_toBottomOf="@+id/product_info_des_textView" />
 
@@ -154,10 +153,9 @@
             android:id="@+id/driver_info_location_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:paddingBottom="2dp"
             app:layout_constraintStart_toStartOf="@+id/driver_info_price_textView"
             app:layout_constraintTop_toBottomOf="@+id/driver_info_price_textView" />
 

@@ -18,8 +18,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.AnotherProfileActivity"></activity>
-        <!-- <meta-data -->
+        <activity android:name=".activities.ReportActivity"></activity>
+        <activity android:name=".activities.ShowSubActivity" />
+        <activity android:name=".activities.AnotherProfileActivity" /> <!-- <meta-data -->
         <!-- android:name="com.google.firebase.messaging.default_notification_icon" -->
         <!-- android:resource="@drawable/ic_stat_ic_notification" /> -->
         <!-- &lt;!&ndash; Set color used with incoming notification messages. This is used when no color is set for the incoming -->

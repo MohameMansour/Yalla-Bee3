@@ -10,17 +10,12 @@ public class Product {
     private String productImageUrl;
     private String userId;
     private String catId;
+    private String subCatId;
+    private String productImageUrl2;
+    private String productImageUrl3;
+    private String productImageUrl4;
 
-
-    public Product(String id, String title, String description, String price, String productImageUrl) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.productImageUrl = productImageUrl;
-    }
-
-    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId, String catId) {
+    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId, String catId, String subCatId, String productImageUrl2, String productImageUrl3, String productImageUrl4) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -30,6 +25,31 @@ public class Product {
         this.productImageUrl = productImageUrl;
         this.userId = userId;
         this.catId = catId;
+        this.subCatId = subCatId;
+        this.productImageUrl2 = productImageUrl2;
+        this.productImageUrl3 = productImageUrl3;
+        this.productImageUrl4 = productImageUrl4;
+    }
+
+    public Product(String id, String title, String description, String price, String productImageUrl) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.productImageUrl = productImageUrl;
+    }
+
+    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId, String catId, String subCatId) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.phone = phone;
+        this.place = place;
+        this.productImageUrl = productImageUrl;
+        this.userId = userId;
+        this.catId = catId;
+        this.subCatId = subCatId;
     }
 
     public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId) {
@@ -153,5 +173,37 @@ public class Product {
 
     public void setPlace(String place) {
         this.place = place;
+    }
+
+    public String getSubCatId() {
+        return subCatId;
+    }
+
+    public void setSubCatId(String subCatId) {
+        this.subCatId = subCatId;
+    }
+
+    public String getProductImageUrl2() {
+        return productImageUrl2;
+    }
+
+    public void setProductImageUrl2(String productImageUrl2) {
+        this.productImageUrl2 = productImageUrl2;
+    }
+
+    public String getProductImageUrl3() {
+        return productImageUrl3;
+    }
+
+    public void setProductImageUrl3(String productImageUrl3) {
+        this.productImageUrl3 = productImageUrl3;
+    }
+
+    public String getProductImageUrl4() {
+        return productImageUrl4;
+    }
+
+    public void setProductImageUrl4(String productImageUrl4) {
+        this.productImageUrl4 = productImageUrl4;
     }
 }

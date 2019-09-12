@@ -1,15 +1,15 @@
 package com.example.yallabee3.activities;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.example.yallabee3.R;
-import com.example.yallabee3.adapt_hold.adapter.ShowAdapter;
-import com.example.yallabee3.model.Product;
+import com.example.yallabee3.adapt_hold.adapter.SubCategoryAdapter;
+import com.example.yallabee3.model.SubCategory;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -20,25 +20,25 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class ShowActivity extends AppCompatActivity {
+public class ShowSubActivity extends AppCompatActivity {
 
     DatabaseReference myRef;
-    List<Product> products = new ArrayList<>();
-    ShowAdapter adapter;
+    List<SubCategory> subCategories = new ArrayList<>();
+    SubCategoryAdapter adapter;
 
     String compid;
     FirebaseAuth auth;
     FirebaseUser user;
 
-    private String recivedName ;
-    private String recivedIdForProduct ;
+    private String recivedName;
+    private String recivedIdForProduct;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show);
+        setContentView(R.layout.activity_show_sub);
 
         myRef = FirebaseDatabase.getInstance().getReference();
 
@@ -58,21 +58,20 @@ public class ShowActivity extends AppCompatActivity {
 //        DatabaseReference db_ref = blankRecordReference.push();
 //        String Id = db_ref.getKey();
 
-//  true      Query query = FirebaseDatabase.getInstance().getReference("Products").orderByChild("catId").equalTo(recivedName);
-
-        Query query = FirebaseDatabase.getInstance().getReference("Products").orderByChild("subCatId").equalTo(recivedName);
+        Query query = FirebaseDatabase.getInstance().getReference("SubCategory").orderByChild("catId").equalTo(recivedName);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                products.clear();
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Product product = snapshot.getValue(Product.class);
-                    products.add(product);
+                    SubCategory subCategory = snapshot.getValue(SubCategory.class);
+//                    Toast.makeText(ShowSubActivity.this, dataSnapshot.getChildrenCount() + "", Toast.LENGTH_SHORT).show();
+                    String id = snapshot.getKey();
+//                    Toast.makeText(ShowSubActivity.this, "new "+id, Toast.LENGTH_SHORT).show();
+                    subCategory.setId(id);
+                    subCategories.add(subCategory);
                     adapter.notifyDataSetChanged();
                 }
-
-                Collections.reverse(products);
             }
 
             @Override
@@ -82,29 +81,9 @@ public class ShowActivity extends AppCompatActivity {
         });
 
 
-//        myRef.child("Category").child(recivedName).child(recivedName).child(recivedIdForProduct).addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                products.clear();
-//
-//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-//                    Product product = snapshot.getValue(Product.class);
-//                    products.add(product);
-//                    adapter.notifyDataSetChanged();
-//                }
-//
-//                Collections.reverse(products);
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-
-        RecyclerView recyclerView = findViewById(R.id.driver_info_recyclerView);
-        adapter = new ShowAdapter(products, ShowActivity.this , ShowAdapter.LAND_SCAPE_PRODUCT);
-        recyclerView.setLayoutManager(new LinearLayoutManager(ShowActivity.this));
+        RecyclerView recyclerView = findViewById(R.id.subcategory_recyclerView);
+        adapter = new SubCategoryAdapter(subCategories, ShowSubActivity.this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(ShowSubActivity.this));
         recyclerView.setAdapter(adapter);
     }
 }

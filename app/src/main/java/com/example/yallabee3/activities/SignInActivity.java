@@ -64,7 +64,7 @@ public class SignInActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        mAuth.signInWithEmailAndPassword(email, password).
+        mAuth.signInWithEmailAndPassword(email,password).
                 addOnCompleteListener(this,
                         new OnCompleteListener<AuthResult>() {
                             @Override

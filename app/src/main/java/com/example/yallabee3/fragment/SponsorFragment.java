@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,9 +15,8 @@ import android.widget.Button;
 
 import com.example.yallabee3.R;
 import com.example.yallabee3.activities.AddSponsorActivity;
-import com.example.yallabee3.adapt_hold.adapter.ShowAdapter;
 import com.example.yallabee3.adapt_hold.adapter.SponserAdapter;
-import com.example.yallabee3.model.Product;
+import com.example.yallabee3.model.Sponsor;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,7 +40,7 @@ public class SponsorFragment extends Fragment {
     private SponserAdapter sponserAdapter;
 
     DatabaseReference myRef;
-    List<Product> products = new ArrayList<>();
+    List<Sponsor> products = new ArrayList<>();
 
     String compid;
     FirebaseAuth auth;
@@ -78,7 +76,7 @@ public class SponsorFragment extends Fragment {
                 products.clear();
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Product product = snapshot.getValue(Product.class);
+                    Sponsor product = snapshot.getValue(Sponsor.class);
                     products.add(product);
                     sponserAdapter.notifyDataSetChanged();
                 }

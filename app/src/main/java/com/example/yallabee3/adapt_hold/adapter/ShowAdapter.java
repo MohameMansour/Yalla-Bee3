@@ -66,8 +66,8 @@ public class ShowAdapter extends RecyclerView.Adapter<ShowHolder> {
         holder.locationTextView.setText(product.getPlace());
 
         holder.itemView.setOnClickListener(v -> {
-            openDetails(product.getProductImageUrl(), product.getTitle(),product.getDescription()
-                    , product.getPrice(), product.getPhone() ,product.getPlace() , product.getUserId());
+            openDetails(product.getProductImageUrl(), product.getTitle(), product.getDescription()
+                    , product.getPrice(), product.getPhone(), product.getPlace(), product.getUserId(), product.getId());
 //            Intent intent = new Intent(getContext(), ProductDetailsActivity.class);
 
 //            String id = product.getId();
@@ -99,6 +99,7 @@ public class ShowAdapter extends RecyclerView.Adapter<ShowHolder> {
         i.putExtra("phone_key", details[4]);
         i.putExtra("location_key", details[5]);
         i.putExtra("userId_key", details[6]);
+        i.putExtra("productId_key", details[7]);
 
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 

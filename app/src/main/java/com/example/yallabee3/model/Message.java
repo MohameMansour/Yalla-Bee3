@@ -7,16 +7,18 @@ public class Message {
     private String sender;
     private String receiver;
     private boolean isSeen;
+    private String productId;
 
     public Message() {
     }
 
-    public Message(String id, String message, String sender, String receiver, boolean isSeen) {
+    public Message(String id, String message, String sender, String receiver, boolean isSeen, String productId) {
         this.id = id;
         this.message = message;
         this.sender = sender;
         this.receiver = receiver;
         this.isSeen = isSeen;
+        this.productId = productId;
     }
 
     public String getId() {
@@ -57,5 +59,13 @@ public class Message {
 
     public void setSeen(boolean seen) {
         isSeen = seen;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 }

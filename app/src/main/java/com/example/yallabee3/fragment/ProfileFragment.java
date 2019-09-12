@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import com.example.yallabee3.R;
 import com.example.yallabee3.activities.SignInActivity;
 import com.example.yallabee3.adapt_hold.adapter.ShowAdapter;
+import com.example.yallabee3.model.Favourite;
 import com.example.yallabee3.model.Product;
 import com.example.yallabee3.model.User;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,13 +33,14 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+
+import static android.support.constraint.Constraints.TAG;
 
 
 public class ProfileFragment extends Fragment {
@@ -58,6 +61,12 @@ public class ProfileFragment extends Fragment {
 
     List<Product> products = new ArrayList<>();
     ShowAdapter adapter;
+
+    List<Favourite> favourites = new ArrayList<>();
+
+    ShowAdapter adapter2;
+    List<Product> products2 = new ArrayList<>();
+
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -80,15 +89,87 @@ public class ProfileFragment extends Fragment {
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                products.clear();
+                products2.clear();
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Product product = snapshot.getValue(Product.class);
-                    products.add(product);
-                    adapter.notifyDataSetChanged();
+                    products2.add(product);
+                    adapter2.notifyDataSetChanged();
                 }
 
-                Collections.reverse(products);
+//                Collections.reverse(products);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+        });
+
+        RecyclerView recyclerView = view.findViewById(R.id.profile_products_recyclerView);
+        adapter2 = new ShowAdapter(products2, getContext(), ShowAdapter.LAND_SCAPE_PRODUCT);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerView.setAdapter(adapter2);
+
+
+        //
+
+        Query query2 = FirebaseDatabase.getInstance().getReference("Favourite");
+        query2.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                products.clear();
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+//                    Product product = snapshot.getValue(Product.class);
+//                    String id = snapshot.getKey();
+                    Favourite favourite = snapshot.getValue(Favourite.class);
+                    String id = snapshot.getKey();
+
+                    assert favourite != null;
+                    favourite.setRootId(id);
+//                    favourite.setUserId(user.getUid());
+//                    favourite.getUserId();
+                    favourite.getProductId();
+//                    DatabaseReference myRef2 = FirebaseDatabase.getInstance().getReference();
+//                    myRef2.child("Favourite").child(id).child("userId");
+
+//                    assert product != null;
+//                    product.setId(id);
+//                    products.add(product);
+//                    adapter.notifyDataSetChanged();
+
+                    String productId = favourite.getProductId();
+                    String userId = favourite.getUserId();
+                    Log.d(TAG, "onDataChange: " + productId);
+                    if (userId.equals(user.getUid())) {
+                        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
+                        myRef.child("Products").child(productId).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                Product product = dataSnapshot.getValue(Product.class);
+                                products.add(product);
+                                adapter.notifyDataSetChanged();
+//                            }
+//                                            Collections.reverse(products);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+
+                        RecyclerView recyclerView2 = view.findViewById(R.id.profile_favourites_recyclerView);
+                        adapter = new ShowAdapter(products, getContext(), ShowAdapter.LAND_SCAPE_PRODUCT);
+                        recyclerView2.setLayoutManager(new LinearLayoutManager(context));
+                        recyclerView2.setAdapter(adapter);
+
+                    }
+                }
+
             }
 
             @Override
@@ -97,10 +178,8 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        RecyclerView recyclerView = view.findViewById(R.id.profile_products_recyclerView);
-        adapter = new ShowAdapter(products, context , ShowAdapter.LAND_SCAPE_PRODUCT);
-        recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.setAdapter(adapter);
+
+        //
 
         if (user != null) {
             // Name, email address, and profile photo Url
@@ -129,7 +208,6 @@ public class ProfileFragment extends Fragment {
 
                 }
             });
-
 
 
             profileEmailTextview.setText(email);

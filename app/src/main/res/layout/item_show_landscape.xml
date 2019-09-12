@@ -16,14 +16,16 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        >
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/product_info_img_view"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/image_icon"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
             android:src="@drawable/user_img"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

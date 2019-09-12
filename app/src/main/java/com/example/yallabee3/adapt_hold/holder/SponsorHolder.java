@@ -16,6 +16,9 @@ public class SponsorHolder extends RecyclerView.ViewHolder{
     public TextView titlesponsorTextView;
     public TextView dessponsorTextView;
     public TextView costsponsotTextView;
+    public TextView phonesponsotTextView;
+    public TextView locationsponsotTextView;
+    public TextView timesponsotTextView;
 
 
     public SponsorHolder(@NonNull View view) {
@@ -25,5 +28,8 @@ public class SponsorHolder extends RecyclerView.ViewHolder{
         titlesponsorTextView = view.findViewById(R.id.item_course_title_textView);
         dessponsorTextView = view.findViewById(R.id.item_course_instructor_name_textView);
         costsponsotTextView = view.findViewById(R.id.item_course_duration_textView);
+        phonesponsotTextView =view.findViewById(R.id.item_phone_textView);
+        locationsponsotTextView =view.findViewById(R.id.item_location_textView);
+        timesponsotTextView =view.findViewById(R.id.item_time_textView);
     }
 }

@@ -84,7 +84,6 @@ public class NavActivity extends AppCompatActivity implements BottomNavigationVi
         loadFragment(new HomeFragment());
 
         checkUserStatus();
-//        loadStartFragment();
         updateToken(FirebaseInstanceId.getInstance().getToken());
     }
 

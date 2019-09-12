@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.yallabee3.R;
 import com.example.yallabee3.adapt_hold.adapter.ShowAdapter;
+import com.example.yallabee3.model.Favourite;
 import com.example.yallabee3.model.Product;
 import com.example.yallabee3.model.User;
 import com.google.firebase.auth.FirebaseAuth;
@@ -67,9 +68,15 @@ public class ProductDetailsActivity extends AppCompatActivity {
     CircleImageView productUserProfileImage;
     @BindView(R.id.product_user_name_textview)
     TextView productUserNameTextview;
+    @BindView(R.id.report_product_textview)
+    TextView reportProductTextview;
+    @BindView(R.id.favourite_product_image)
+    ImageView favouriteProductImage;
 
+    String phone, userId, productId;
 
-    String phone, userId;
+    DatabaseReference databaseReference;
+    FirebaseDatabase database;
 
 
     @Override
@@ -91,6 +98,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         phone = i.getExtras().getString("phone_key");
         String location = i.getExtras().getString("location_key");
         userId = i.getExtras().getString("userId_key");
+        productId = i.getExtras().getString("productId_key");
+
         Toast.makeText(this, userId, Toast.LENGTH_SHORT).show();
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -99,7 +108,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
             // momken azhrlo mslan eno y3del fe el product bta3o
         } else {
             linear.setVisibility(View.VISIBLE);
+            reportProductTextview.setVisibility(View.VISIBLE);
             userProfileAddProductLinear.setVisibility(View.VISIBLE);
+            favouriteProductImage.setVisibility(View.VISIBLE);
             myRef.child("User").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -123,24 +134,22 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
                 }
             });
-    }
+        }
 
-        if(image !=null)
-
-    {
-        Picasso.get()
-                .load(image)
-                .into(productDetailsImageView);
-    }
+        if (image != null) {
+            Picasso.get()
+                    .load(image)
+                    .into(productDetailsImageView);
+        }
         productDetailsNameTextview.setText(title);
         productDetailsDescTextview.setText(desc);
         productDetailsPriceTextview.setText(price);
         productDetailslocationTextview.setText(location);
 
 
-}
+    }
 
-    @OnClick({R.id.product_details_call_button, R.id.product_details_chat_button})
+    @OnClick({R.id.product_details_call_button, R.id.product_details_chat_button, R.id.report_product_textview, R.id.user_profile_add_product_linear})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.product_details_call_button:
@@ -151,17 +160,41 @@ public class ProductDetailsActivity extends AppCompatActivity {
             case R.id.product_details_chat_button:
                 Intent i = new Intent(ProductDetailsActivity.this, ChatActivity.class);
                 i.putExtra("userId_key", userId);
+                i.putExtra("productId_key", productId);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
+                break;
+            case R.id.report_product_textview:
+                Intent x = new Intent(ProductDetailsActivity.this, ReportActivity.class);
+                x.putExtra("productId_key", productId);
+                x.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(x);
+                break;
+            case R.id.user_profile_add_product_linear:
+                Intent c = new Intent(ProductDetailsActivity.this, AnotherProfileActivity.class);
+                c.putExtra("userId_key", userId);
+                c.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(c);
                 break;
         }
     }
 
-    @OnClick(R.id.user_profile_add_product_linear)
+    @OnClick(R.id.favourite_product_image)
     public void onViewClicked() {
-        Intent i = new Intent(ProductDetailsActivity.this, AnotherProfileActivity.class);
-        i.putExtra("userId_key", userId);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        FirebaseDatabase fb_db_instance = FirebaseDatabase.getInstance();
+        DatabaseReference db_ref_Main = fb_db_instance.getReference();
+        DatabaseReference blankRecordReference = db_ref_Main;
+        DatabaseReference db_ref = blankRecordReference.push();
+        String Id = db_ref.getKey();
+
+        String ownerProfileId = user.getUid();
+        Favourite favourite = new Favourite(Id, productId, ownerProfileId);
+        databaseReference.child("Favourite").child(Id).setValue(favourite);
+        Toast.makeText(this, "Added To Your Favourite", Toast.LENGTH_SHORT).show();
+
     }
 }
