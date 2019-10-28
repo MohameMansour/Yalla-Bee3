@@ -7,7 +7,7 @@
         android:title="@string/home" />
     <item
         android:id="@+id/navigation_category"
-        android:icon="@drawable/category"
+        android:icon="@drawable/list"
         android:title="@string/category" />
     <item
         android:id="@+id/navigation_add"
@@ -16,7 +16,7 @@
     <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_chat"
-        android:title="Chat" />
+        android:title="@string/chat" />
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"

@@ -15,5 +15,8 @@
     <color name="colorBorder">#2F5864</color>
     <color name="colorBlack">#000</color>
     <color name="colorRed">#FF0000</color>
+    <color name="colornew1">#10911C</color>
+    <color name="colornew2">#FF6A08</color>
+    <color name="colornew3">#140B5F</color>
 
 </resources>

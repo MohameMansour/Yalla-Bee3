@@ -6,7 +6,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
 
@@ -49,8 +49,13 @@
     </style>
 
     <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
-        <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:backgroundTint">@color/colorWhite</item>
+    </style>
+
+    <style name="Spinner2" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
     </style>
 
     <style name="SCBSwitch" parent="Theme.AppCompat.Light">
@@ -59,4 +64,12 @@
         <item name="android:colorForeground">@color/colorWhite</item>
     </style>
 
+    <!--<style name="MatchSpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">-->
+        <!--<item name="android:divider">#123456</item>-->
+        <!--<item name="android:dividerHeight">2dp</item>-->
+    <!--</style>-->
+
+    <!--<style name="MatchSpinnerTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--<item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>-->
+    <!--</style>-->
 </resources>

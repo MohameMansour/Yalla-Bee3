@@ -1,6 +1,7 @@
 package com.example.yallabee3.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -46,7 +47,7 @@ public class AnotherProfileActivity extends AppCompatActivity {
 
     DatabaseReference myRef;
     FirebaseAuth auth;
-
+    String currentcountryfromfirebase;
     List<Product> products = new ArrayList<>();
     ShowAdapter adapter;
 
@@ -64,8 +65,20 @@ public class AnotherProfileActivity extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        SharedPreferences sp = getSharedPreferences("SP_FIREBASE", MODE_PRIVATE);
+        currentcountryfromfirebase = sp.getString("countryfromdatabase", "new");
 
-        Query query = FirebaseDatabase.getInstance().getReference("Products").orderByChild("userId").equalTo(userId);
+        Query query;
+        if (currentcountryfromfirebase.equals("مصر") || currentcountryfromfirebase.equals("Egypt")) {
+            query = FirebaseDatabase.getInstance().getReference("ProductsEgy").orderByChild("userId").equalTo(userId);
+        } else if (currentcountryfromfirebase.equals("السعودية العربية") || currentcountryfromfirebase.equals("KSA")) {
+            query = FirebaseDatabase.getInstance().getReference("ProductsSod").orderByChild("userId").equalTo(userId);
+        } else if (currentcountryfromfirebase.equals("الامارات") || currentcountryfromfirebase.equals("Arab Emirates")) {
+            query = FirebaseDatabase.getInstance().getReference("ProductsEm").orderByChild("userId").equalTo(userId);
+        } else {
+            query = FirebaseDatabase.getInstance().getReference("Products").orderByChild("userId").equalTo(userId);
+        }
+//        Query query = FirebaseDatabase.getInstance().getReference("Products").orderByChild("userId").equalTo(userId);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -108,6 +121,8 @@ public class AnotherProfileActivity extends AppCompatActivity {
                         Picasso.get()
                                 .load(image)
                                 .into(anotherprofileImageImageView);
+                    } else {
+
                     }
                     anotherprofileUsernameTextview.setText(name);
                     anotherprofileEmailTextview.setText(email);
@@ -125,6 +140,5 @@ public class AnotherProfileActivity extends AppCompatActivity {
     }
 
 
-
-    }
+}
 

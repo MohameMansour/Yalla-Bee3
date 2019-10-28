@@ -5,7 +5,7 @@ public class Categery {
     private String id;
     private String name;
     private String image;
-    private String numberOfProduct;
+//    private String numberOfProducts;
 
     public Categery() {
     }
@@ -15,13 +15,13 @@ public class Categery {
         this.name = name;
         this.image = image;
     }
-
-    public Categery(String id, String name, String image, String numberOfProduct) {
-        this.id = id;
-        this.name = name;
-        this.image = image;
-        this.numberOfProduct = numberOfProduct;
-    }
+//
+//    public Categery(String id, String name, String image, String numberOfProducts) {
+//        this.id = id;
+//        this.name = name;
+//        this.image = image;
+//        this.numberOfProducts = numberOfProducts;
+//    }
 
     public String getId() {
         return id;
@@ -47,12 +47,12 @@ public class Categery {
         this.image = productImageUrl;
     }
 
-    public String getNumberOfProduct() {
-        return numberOfProduct;
-    }
-
-    public void setNumberOfProduct(String numberOfProduct) {
-        this.numberOfProduct = numberOfProduct;
-    }
+//    public String getNumberOfProducts() {
+//        return numberOfProducts;
+//    }
+//
+//    public void setNumberOfProducts(String numberOfProducts) {
+//        this.numberOfProducts = numberOfProducts;
+//    }
 
 }

@@ -1,7 +1,6 @@
 package com.example.yallabee3.fragment;
 
 
-import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -22,11 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+import java.util.Collections;
 
 public class ChatFragment extends Fragment {
 
@@ -165,41 +162,28 @@ public class ChatFragment extends Fragment {
         myRef.child("Chats").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                chats.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Chats chats1 = snapshot.getValue(Chats.class);
                     String id = snapshot.getKey();
-                    assert chats1 != null;
-                    chats1.setRootId(id);
-                    //
-                    String totaltime = null;
-                    Calendar c = Calendar.getInstance();
-                    SimpleDateFormat gethour = new SimpleDateFormat("HH");
-                    SimpleDateFormat getminute = new SimpleDateFormat("mm");
-                    String hour = gethour.format(c.getTime());
-                    String minute = getminute.format(c.getTime());
-                    int convertedVal = Integer.parseInt(hour);
-
-                    if (convertedVal > 12) {
-                        totaltime = ((convertedVal - 12) + ":" + (minute) + "pm");
-                    } else if (convertedVal == 12) {
-                        totaltime = ("12" + ":" + (minute) + "pm");
-                    } else if (convertedVal < 12) {
-                        if (convertedVal != 0) {
-                            totaltime = ((convertedVal) + ":" + (minute) + "am");
-                        } else {
-                            totaltime = ("12" + ":" + minute + "am");
-                        }
-                    }
-                    //
-                    String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
-
-                    //
-                    chats1.setDate(date_n);
-                    chats1.setTime(totaltime);
-                    chats.add(chats1);
+                    chats1.getReceiverId();
+                    chats1.getSenderId();
+                    if (chats1.getReceiverId().equals(user.getUid()) ||
+                            chats1.getSenderId().equals(user.getUid())) {
+                        assert chats1 != null;
+                        chats1.setRootId(id);
+                        chats.add(chats1);
 //                    chatsadapter.addItem(chats1);
-                    chatsadapter.notifyDataSetChanged();
+                        chatsadapter.notifyDataSetChanged();
+
+                    }
+//                    assert chats1 != null;
+//                    chats1.setRootId(id);
+//                    chats.add(chats1);
+////                    chatsadapter.addItem(chats1);
+//                    chatsadapter.notifyDataSetChanged();
                 }
+                Collections.reverse(chats);
             }
 
             @Override
@@ -207,8 +191,6 @@ public class ChatFragment extends Fragment {
 
             }
         });
-
-
         RecyclerView recyclerView = view.findViewById(R.id.chatlist_recyclerview);
         chatsadapter = new ChatsAdapter(chats, getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

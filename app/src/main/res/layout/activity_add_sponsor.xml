@@ -6,85 +6,168 @@
     android:layout_height="match_parent"
     tools:context=".activities.AddSponsorActivity">
 
-
     <ImageView
         android:id="@+id/addsponsor_image_imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/sponsor_image"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user_img" />
+        app:srcCompat="@drawable/adddddd" />
 
     <EditText
         android:id="@+id/addsponsor_title_edittext"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Title"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_border_gray"
+        android:padding="8dp"
+        tools:ignore="Autofill"
+        android:hint="@string/title"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/addsponsor_image_imageView" />
 
-    <EditText
-        android:id="@+id/addsponsor_desc_edittext"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/lineare"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Description"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addsponsor_title_edittext" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/addsponsor_title_edittext">
+
 
     <EditText
-        android:id="@+id/addsponsor_price_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Price"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addsponsor_desc_edittext" />
+            android:id="@+id/addsponsor_price_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/price"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_border_gray"
+            android:padding="8dp"
+            tools:ignore="Autofill"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/addsponsor_title_edittext" />
+
+
+        <TextView
+            android:id="@+id/aaddproduct_3omla_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_border_gray"
+            android:text="@string/dinar"
+            android:visibility="gone"
+            android:padding="8dp"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:id="@+id/aaddproduct_3omlaegy_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_border_gray"
+            android:text="@string/l_e"
+            android:visibility="gone"
+             />
+        <TextView
+            android:id="@+id/aaddproduct_3omlasod_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/sar"
+            android:visibility="gone"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_border_gray"
+            />
+        <TextView
+            android:id="@+id/aaddproduct_3omlaema_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aed"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_border_gray" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/addsponsor_phone_edittext"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Phone Number"
+        android:hint="@string/phone_number"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addsponsor_price_edittext" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_border_gray"
+        android:padding="8dp"
+        tools:ignore="Autofill"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/lineare" />
 
     <EditText
         android:id="@+id/addsponsor_location_edittext"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Location"
+        android:hint="@string/location"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_border_gray"
+        android:padding="8dp"
+        tools:ignore="Autofill"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@+id/addsponsor_phone_edittext" />
+
+    <EditText
+        android:id="@+id/addsponsor_desc_edittext"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_border_gray"
+        android:padding="8dp"
+        tools:ignore="Autofill"
+        android:gravity="start"
+        android:hint="@string/description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/addsponsor_location_edittext" />
 
     <Button
         android:id="@+id/addsponsor_button"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="22dp"
-        android:text="Add Sponser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addsponsor_location_edittext" />
+        android:layout_marginTop="32dp"
+        android:background="@drawable/back_solid_primary"
+        android:text="@string/add_sponser"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/addsponsor_desc_edittext" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
 
 </android.support.constraint.ConstraintLayout>

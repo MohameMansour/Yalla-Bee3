@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -52,6 +53,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 
+import static android.support.constraint.Constraints.TAG;
+
+
 public class ChatActivity extends AppCompatActivity {
 
     @BindView(R.id.image_user)
@@ -77,7 +81,9 @@ public class ChatActivity extends AppCompatActivity {
     MessageAdapter adapter;
 
     String image;
-    String anotheruserIdInChat, productId;
+    String anotheruserIdInChat, productId ;
+    String getnametoprofile ;
+    String reciverproduct;
     String myId;
 
     FirebaseAuth firebaseAuth;
@@ -88,6 +94,9 @@ public class ChatActivity extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference databaseReference;
+
+    DatabaseReference myRef;
+
 
     @Override
 
@@ -101,6 +110,9 @@ public class ChatActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
+
+        myRef = FirebaseDatabase.getInstance().getReference();
+//        FirebaseUser user = firebaseAuth.getCurrentUser();
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
@@ -116,10 +128,24 @@ public class ChatActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
         anotheruserIdInChat = i.getExtras().getString("userId_key");
-        productId = i.getExtras().getString("productId_key");
-        Toast.makeText(this, anotheruserIdInChat, Toast.LENGTH_SHORT).show();
+//        anotheruserIdInChat2 = i.getExtras().getString("userId_key");
 
-        Query userquery = usersDbRef.orderByChild("userId").equalTo(anotheruserIdInChat);
+        getnametoprofile = i.getExtras().getString("anotheruserId_key");
+//        getnametoprofile2 = i.getExtras().getString("anotheruserId_key");
+        Log.d(TAG, "onCreate: " + anotheruserIdInChat);
+        Log.d(TAG, "onCreate1: " + getnametoprofile);
+        productId = i.getExtras().getString("productId_key");
+        reciverproduct = i.getExtras().getString("reciverId_key");
+//        Toast.makeText(this, anotheruserIdInChat, Toast.LENGTH_SHORT).show();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String myIds = user.getUid();
+        if (getnametoprofile.equals(myIds)) {
+            getnametoprofile = reciverproduct;
+        } else {
+
+        }
+        Query userquery = usersDbRef.orderByChild("userId").equalTo(getnametoprofile);
         userquery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -133,6 +159,7 @@ public class ChatActivity extends AppCompatActivity {
                         Picasso.get()
                                 .load(image)
                                 .into(imageUser);
+                    } else {
                     }
                     usernameChatTextview.setText(name);
                 }
@@ -207,8 +234,8 @@ public class ChatActivity extends AppCompatActivity {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                     Message message = ds.getValue(Message.class);
-                    if (message.getReceiver().equals(myId)
-                            && message.getSender().equals(anotheruserIdInChat)) {
+                    if (message.getReceiver() == myId
+                            && message.getSender() == anotheruserIdInChat) {
                         boolean isSeen = true;
                         userRefForSeen.child(message.getId()).child("isSeen").setValue(isSeen);
                     }
@@ -236,19 +263,79 @@ public class ChatActivity extends AppCompatActivity {
                 messages.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     Message message = ds.getValue(Message.class);
-                    if (message.getReceiver().equals(myId)
-                            && message.getSender().equals(anotheruserIdInChat) ||
-                            message.getReceiver().equals(anotheruserIdInChat)
-                                    && message.getSender().equals(myId)) {
-                        if(message.getProductId().equals(productId))
-                        {
-                        messages.add(message);}
+//                    if(message.getProductId().equals(productId)){
+//                        messages.add(message);
+//                    }
+                    //
+//                    message.getReceiver().equals(myId)
+//                            && message.getSender().equals(getnametoprofile) ||
+//                            message.getReceiver().equals(getnametoprofile)
+//                                    && message.getSender().equals(myId)  ||
+                    //
+//                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//                    String myIds = user.getUid();
+//                    Log.d(TAG, "onDataChange2: " + myIds);
+                    Log.d(TAG, "onDataChange22: " + anotheruserIdInChat);
+
+//                    if (anotheruserIdInChat.equals(myId)) {
+//                        anotheruserIdInChat = reciverproduct;
+////                        Log.d(TAG, "onDataChange22: " + anotheruserIdInChat);
+//                    } else {
+//
+//                    }
+                    Log.d(TAG, "onData: " + message.getReceiver());
+                    Log.d(TAG, "onData1: " + message.getSender());
+
+                    if (
+                            message.getReceiver().equals(myId)
+                                    && message.getSender().equals(anotheruserIdInChat) ||
+                                    message.getReceiver().equals(anotheruserIdInChat)
+                                            && message.getSender().equals(myId)
+                                    ||
+                                    message.getReceiver().equals(myId)
+                                            && message.getSender().equals(getnametoprofile) ||
+                                    message.getReceiver().equals(getnametoprofile)
+                                            && message.getSender().equals(myId)
+
+//                                message.getReceiver().equals(myId)
+//                            && message.getSender().equals(anotheruserIdInChat) ||
+//                            message.getReceiver().equals(anotheruserIdInChat)
+//                                    && message.getSender().equals(myId)
+                    ) {
+//                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//                    String myIds = user.getUid();
+//                    if (anotheruserIdInChat == myIds) {
+//                        anotheruserIdInChat = reciverproduct;
+//                    } else {
+//
+//                    }
+
+//                    if (
+//                            message.getReceiver() == myId
+//                                    && message.getSender() == anotheruserIdInChat ||
+//                                    message.getReceiver() == anotheruserIdInChat
+//                                            && message.getSender() == myId ||
+//                                    message.getReceiver() == myId
+//                                            && message.getSender() == getnametoprofile ||
+//                                    message.getReceiver() == getnametoprofile
+//                                            && message.getSender() == myId
+//                    ) {
+
+//                    if (message.getProductId().equals(productId)) {
+//                        messages.add(message);
+//                    }
+
+                        if (message.getProductId().equals(productId)) {
+                            messages.add(message);
+                        }
+
                     }
 
                     adapter = new MessageAdapter(messages, ChatActivity.this, image);
                     adapter.notifyDataSetChanged();
 //                    chatRecyclerview.setLayoutManager(new LinearLayoutManager(ChatActivity.this));
                     chatRecyclerview.setAdapter(adapter);
+
                 }
             }
 
@@ -270,10 +357,52 @@ public class ChatActivity extends AppCompatActivity {
         DatabaseReference db_ref = blankRecordReference.push();
         String Id = db_ref.getKey();
 
+//
+        String totaltimee = null;
+        Calendar cc = Calendar.getInstance();
+        SimpleDateFormat gethourr = new SimpleDateFormat("HH");
+        SimpleDateFormat getminutee = new SimpleDateFormat("mm");
+        String hourr = gethourr.format(cc.getTime());
+        String minutee = getminutee.format(cc.getTime());
+        int convertedVall = Integer.parseInt(hourr);
 
+        if (convertedVall > 12) {
+            totaltimee = ((convertedVall - 12) + ":" + (minutee) + "pm");
+        } else if (convertedVall == 12) {
+            totaltimee = ("12" + ":" + (minutee) + "pm");
+        } else if (convertedVall < 12) {
+            if (convertedVall != 0) {
+                totaltimee = ((convertedVall) + ":" + (minutee) + "am");
+            } else {
+                totaltimee = ("12" + ":" + minutee + "am");
+            }
+        }
+        //
+        String date_nn = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+        String t_d = date_nn + "_" + totaltimee;
+
+        //
 //        HashMap<String, Object> hashMap = new HashMap<>;
         boolean isSeen = false;
-        Message message1 = new Message(Id, message, myId, anotheruserIdInChat, isSeen, productId);
+//        if (getnametoprofile == myId ){
+//            getnametoprofile = reciverproduct;
+//            Message message1 = new Message(Id, message, myId, getnametoprofile, isSeen, productId, t_d);
+//            databaseReference.child("Chating").child(Id).setValue(message1);
+
+//        }
+//        else {
+//            Message message1 = new Message(Id, message, myId, getnametoprofile, isSeen, productId, t_d);
+//            databaseReference.child("Chating").child(Id).setValue(message1);
+
+//        }
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String myIds = user.getUid();
+        if (getnametoprofile.equals(myIds)) {
+            getnametoprofile = reciverproduct;
+        } else {
+
+        }
+        Message message1 = new Message(Id, message, myId, getnametoprofile, isSeen, productId, t_d);
         databaseReference.child("Chating").child(Id).setValue(message1);
 
 //        databaseReference.child("Products").child(productId).child("Chat").child(Id).setValue(message1);
@@ -319,8 +448,82 @@ public class ChatActivity extends AppCompatActivity {
         //
         String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
 
-        Chats sponsor = new Chats(Id,productId,myId,anotheruserIdInChat,date_n ,totaltime);
-        databaseReference.child("Chats").child(productId).setValue(sponsor);
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String finalTotaltime = totaltime;
+
+//        myRef.child("Chats").addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+
+        Query query = FirebaseDatabase.getInstance().getReference("Chats").orderByChild("productId").equalTo(productId);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                String id = dataSnapshot.getValue().toString();
+//                Log.d(TAG, "onDataChange222: "  + id);
+                if (dataSnapshot.exists()) {
+
+//                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+//                        Chats chats = ds.getValue(Chats.class);
+                    Query querys = FirebaseDatabase.getInstance().getReference("Chats").orderByChild("senderId").equalTo(myId);
+                    querys.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot ds) {
+                            if (ds.exists()) {
+
+                            } else {
+                                Chats sponsor = new Chats(Id, productId, myId, anotheruserIdInChat, date_n, finalTotaltime);
+                                databaseReference.child("Chats").child(Id).setValue(sponsor);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                } else {
+                    Chats sponsor = new Chats(Id, productId, myId, anotheruserIdInChat, date_n, finalTotaltime);
+                    databaseReference.child("Chats").child(Id).setValue(sponsor);
+//                        Toast.makeText(ChatActivity.this, "m4 mwgod", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+//                    Chats chats1 = snapshot.getValue(Chats.class);
+//                    String id = snapshot.getKey();
+//                    assert chats1 != null;
+//                    chats1.setRootId(id);
+//                    String chatId = chats1.getRootId();
+//                    chats1.getSenderId();
+//                    chats1.getProductId();
+//                    Log.d(TAG, "onDataChangee1: "+chats1.getSenderId());
+//                    Log.d(TAG, "onDataChangee2: "+chats1.getProductId());
+//
+//                    if (chats1.getSenderId()== user.getUid()
+//                            && chats1.getProductId() == productId) {
+////                        Chats sponsor1 = new Chats(chatId,date_n , finalTotaltime);
+////                        databaseReference.child("Chats").child(chatId).setValue(sponsor1);
+//
+//                        Toast.makeText(ChatActivity.this, " exist", Toast.LENGTH_SHORT).show();
+//
+//                    } else
+//                    {
+//                        Chats sponsor = new Chats(Id,productId,myId,anotheruserIdInChat,date_n , finalTotaltime);
+//                        databaseReference.child("Chats").child(Id).setValue(sponsor);
+//
+//                    }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+//        Chats sponsor = new Chats(Id,productId,myId,anotheruserIdInChat,date_n ,totaltime);
+//        databaseReference.child("Chats").child(Id).setValue(sponsor);
     }
 
     private void sendNotification(String anotheruserIdInChat, String fullName, String message) {
@@ -365,4 +568,18 @@ public class ChatActivity extends AppCompatActivity {
         userRefForSeen.removeEventListener(seenListener);
     }
 
+    @OnClick(R.id.username_chat_textview)
+    public void onViewClicked() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String myIds = user.getUid();
+        Intent c = new Intent(ChatActivity.this, AnotherProfileActivity.class);
+        if (getnametoprofile.equals(myIds)) {
+            getnametoprofile = reciverproduct;
+        } else {
+
+        }
+        c.putExtra("userId_key", getnametoprofile);
+        c.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(c);
+    }
 }

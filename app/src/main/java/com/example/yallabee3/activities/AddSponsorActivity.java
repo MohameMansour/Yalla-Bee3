@@ -2,10 +2,10 @@ package com.example.yallabee3.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.icu.util.Calendar;
@@ -18,9 +18,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yallabee3.R;
+import com.example.yallabee3.helpers.InputValidator;
 import com.example.yallabee3.model.Sponsor;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,18 +33,17 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageView;
 
-import java.util.Date;
-
-//import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+//import java.sql.Date;
 
 public class AddSponsorActivity extends AppCompatActivity {
 
@@ -62,7 +63,15 @@ public class AddSponsorActivity extends AppCompatActivity {
 
     @BindView(R.id.addsponsor_button)
     Button addsponsorButton;
-
+    private final int PICK_IMAGE_REQUEST = 71;
+    @BindView(R.id.aaddproduct_3omla_edittext)
+    TextView aaddproduct3omlaEdittext;
+    @BindView(R.id.aaddproduct_3omlaegy_edittext)
+    TextView aaddproduct3omlaegyEdittext;
+    @BindView(R.id.aaddproduct_3omlasod_edittext)
+    TextView aaddproduct3omlasodEdittext;
+    @BindView(R.id.aaddproduct_3omlaema_edittext)
+    TextView aaddproduct3omlaemaEdittext;
     private String title, description, price, phone, location;
     private Uri photoUri;
 
@@ -78,7 +87,7 @@ public class AddSponsorActivity extends AppCompatActivity {
     //FireBase Storage
     FirebaseStorage storage;
     StorageReference storageReference;
-
+    String currentcountryfromfirebase;
     //    DatabaseReference myRef;
 
     @Override
@@ -86,6 +95,20 @@ public class AddSponsorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_sponsor);
         ButterKnife.bind(this);
+
+        SharedPreferences sp2 = getSharedPreferences("SP_FIREBASE", MODE_PRIVATE);
+        currentcountryfromfirebase = sp2.getString("countryfromdatabase", "new");
+
+        if (currentcountryfromfirebase.equals("مصر")) {
+            aaddproduct3omlaegyEdittext.setVisibility(View.VISIBLE);
+        } else if (currentcountryfromfirebase.equals("السعودية العربية")) {
+            aaddproduct3omlasodEdittext.setVisibility(View.VISIBLE);
+        } else if (currentcountryfromfirebase.equals("الامارات")) {
+            aaddproduct3omlaemaEdittext.setVisibility(View.VISIBLE);
+        } else {
+            aaddproduct3omlaEdittext.setVisibility(View.VISIBLE);
+        }
+
     }
 
     public void checkAndroidVersion() {
@@ -106,31 +129,59 @@ public class AddSponsorActivity extends AppCompatActivity {
                 .load(photoUri)
                 .into(addsponsorImageImageView);
     }
+//
+//    private void cropRequest(Uri photoUri) {
+//        CropImage.activity(photoUri)
+//                .setGuidelines(CropImageView.Guidelines.ON)
+//                .setMultiTouchEnabled(true)
+//                .start(this);
+//    }
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//
+//        if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+//            photoUri = CropImage.getPickImageResultUri(this, data);
+//            cropRequest(photoUri);
+//        }
+//
+//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+//            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+//            if (resultCode == RESULT_OK) {
+//                try {
+//                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), result.getUri());
+//                    addsponsorImageImageView.setImageBitmap(bitmap);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
 
-    private void cropRequest(Uri photoUri) {
-        CropImage.activity(photoUri)
-                .setGuidelines(CropImageView.Guidelines.ON)
-                .setMultiTouchEnabled(true)
-                .start(this);
+
+    private void chooseImage() {
+
+        Intent i = new Intent();
+        i.setType("image/*");
+        i.setAction(Intent.ACTION_GET_CONTENT);
+//        i.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+        startActivityForResult(Intent.createChooser(i, "select pic"), PICK_IMAGE_REQUEST);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            photoUri = CropImage.getPickImageResultUri(this, data);
-            cropRequest(photoUri);
-        }
+        super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == RESULT_OK) {
-                try {
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), result.getUri());
-                    addsponsorImageImageView.setImageBitmap(bitmap);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
+                && data != null && data.getData() != null) {
+
+            photoUri = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), photoUri);
+                addsponsorImageImageView.setImageBitmap(bitmap);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
@@ -149,8 +200,8 @@ public class AddSponsorActivity extends AppCompatActivity {
             Toast.makeText(this, "Please Select Image", Toast.LENGTH_SHORT).show();
             return false;
         }
-//        if (!InputValidator.addProductValidation(getApplicationContext(), addsponsorTitleEdittext, addsponsorDescEdittext, addsponsorPriceEdittext))
-//            return false;
+        if (!InputValidator.addSponsorValidation(getApplicationContext(), addsponsorTitleEdittext, addsponsorPriceEdittext, addsponsorPhoneEdittext, addsponsorLocationEdittext, addsponsorDescEdittext))
+            return false;
 
         title = addsponsorTitleEdittext.getText().toString();
         description = addsponsorDescEdittext.getText().toString().trim();
@@ -235,7 +286,16 @@ public class AddSponsorActivity extends AppCompatActivity {
 
                         //
                         Sponsor sponsor = new Sponsor(Id, title, description, price, downUrl, phone, location, date_n);
-                        databaseReference.child("Sponsor").child(Id).setValue(sponsor);
+                        if (currentcountryfromfirebase.equals("مصر")) {
+                            databaseReference.child("SponsorEgy").child(Id).setValue(sponsor);
+                        } else if (currentcountryfromfirebase.equals("السعودية العربية")) {
+                            databaseReference.child("SponsorSod").child(Id).setValue(sponsor);
+                        } else if (currentcountryfromfirebase.equals("الامارات")) {
+                            databaseReference.child("SponsorEm").child(Id).setValue(sponsor);
+                        } else {
+                            databaseReference.child("Sponsor").child(Id).setValue(sponsor);
+                        }
+//                        databaseReference.child("Sponsor").child(Id).setValue(sponsor);
                         // Missing code
                         Toast.makeText(AddSponsorActivity.this, "Added", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(AddSponsorActivity.this, NavActivity
@@ -252,7 +312,7 @@ public class AddSponsorActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.addsponsor_image_imageView:
-                checkAndroidVersion();
+                chooseImage();
                 break;
             case R.id.addsponsor_button:
                 if (getInputData())

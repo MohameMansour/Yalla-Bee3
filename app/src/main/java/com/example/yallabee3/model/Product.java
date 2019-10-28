@@ -6,22 +6,24 @@ public class Product {
     private String description;
     private String price;
     private String phone;
-    private String place;
+    private String country;
     private String productImageUrl;
     private String userId;
     private String catId;
     private String subCatId;
+    private String date;
     private String productImageUrl2;
     private String productImageUrl3;
     private String productImageUrl4;
+    private String subcountry;
 
-    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId, String catId, String subCatId, String productImageUrl2, String productImageUrl3, String productImageUrl4) {
+    public Product(String id, String title, String description, String price, String phone, String country, String productImageUrl, String userId, String catId, String subCatId, String date, String productImageUrl2, String productImageUrl3, String productImageUrl4,String subcountry) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.phone = phone;
-        this.place = place;
+        this.country = country;
         this.productImageUrl = productImageUrl;
         this.userId = userId;
         this.catId = catId;
@@ -29,6 +31,7 @@ public class Product {
         this.productImageUrl2 = productImageUrl2;
         this.productImageUrl3 = productImageUrl3;
         this.productImageUrl4 = productImageUrl4;
+        this.subcountry=subcountry;
     }
 
     public Product(String id, String title, String description, String price, String productImageUrl) {
@@ -39,28 +42,31 @@ public class Product {
         this.productImageUrl = productImageUrl;
     }
 
-    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId, String catId, String subCatId) {
+    public Product(String id, String title, String description, String price, String phone, String country, String productImageUrl, String userId, String catId, String subCatId, String date,String subcountry) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.phone = phone;
-        this.place = place;
+        this.country = country;
         this.productImageUrl = productImageUrl;
         this.userId = userId;
         this.catId = catId;
         this.subCatId = subCatId;
+        this.date = date;
+        this.subcountry=subcountry;
     }
 
-    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl, String userId) {
+    public Product(String id, String title, String description, String price, String phone, String country, String productImageUrl, String userId,String subcountry) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.phone = phone;
-        this.place = place;
+        this.country = country;
         this.productImageUrl = productImageUrl;
         this.userId = userId;
+        this.subcountry=subcountry;
     }
 
     public Product() {
@@ -72,24 +78,26 @@ public class Product {
         this.productImageUrl = productImageUrl;
     }
 
-    public Product(String id, String title, String description, String price, String phone, String place, String productImageUrl) {
+    public Product(String id, String title, String description, String price, String phone, String country, String productImageUrl,String subcountry) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.phone = phone;
-        this.place = place;
+        this.country = country;
         this.productImageUrl = productImageUrl;
+        this.subcountry=subcountry;
 
     }
 
-    public Product(String id, String title, String description, String price, String place, String productImageUrl) {
+    public Product(String id, String title, String description, String price, String country, String productImageUrl,String subcountry) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
-        this.place = place;
+        this.country = country;
         this.productImageUrl = productImageUrl;
+        this.subcountry=subcountry;
     }
 
     //    public Product(String id, String title, String description, String price,String email, String productImageUrl ) {
@@ -168,11 +176,11 @@ public class Product {
     }
 
     public String getPlace() {
-        return place;
+        return country;
     }
 
     public void setPlace(String place) {
-        this.place = place;
+        this.country = place;
     }
 
     public String getSubCatId() {
@@ -205,5 +213,21 @@ public class Product {
 
     public void setProductImageUrl4(String productImageUrl4) {
         this.productImageUrl4 = productImageUrl4;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getSubcountry() {
+        return subcountry;
+    }
+
+    public void setSubcountry(String subcountry) {
+        this.subcountry = subcountry;
     }
 }

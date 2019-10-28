@@ -9,6 +9,91 @@
     <string name="profile">Profile</string>
     <string name="image_icon">Image Icon</string>
     <string name="category">Category</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="phone">Phone</string>
+    <string name="s_i_g_n_u_p">S i g n U P</string>
+    <string name="have_account_sign_in">Have Account , Sign In ...</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="location">Location</string>
+    <string name="add_sponser">Add Sponser</string>
+    <string name="sponsor_image">Sponsor Image</string>
+    <string name="select_category">Select Category</string>
+    <string name="select_sub_category">Select Sub Category</string>
+    <string name="add_product">Add Product</string>
+    <string name="add_location">Add Location</string>
+    <string name="user_name">User Name</string>
+    <string name="log_out">Log Out</string>
+    <string name="my_products">My Products</string>
+    <string name="my_favourites">My Favourites</string>
+    <string name="chat">Chat</string>
+    <string name="reson_of_report">Reson Of Report</string>
+    <string name="wrong_price_picture_category">Wrong Price / Picture / Category</string>
+    <string name="inappropriate_ad_content">Inappropriate ad content</string>
+    <string name="item_sold">Item sold</string>
+    <string name="fraud_or_scam">Fraud or Scam</string>
+    <string name="indecent_seller">Indecent Seller</string>
+    <string name="other">Other</string>
+    <string name="send_report">Send report</string>
+    <string name="description">Description</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="properties">Properties</string>
+    <string name="mobile_phones_accessories">Mobile Phones, Accessories</string>
+    <string name="electronics_home_appliances">Electronics, Home Appliances</string>
+    <string name="home_garden">Home, Garden</string>
+    <string name="fashion_beauty">Fashion, Beauty</string>
+    <string name="pets">Pets</string>
+    <string name="kids_babies">Kids, Babies</string>
+    <string name="sporting_goods_bikes">Sporting Goods, Bikes</string>
+    <string name="hobbies_music_art_books">Hobbies, Music, Art, Books</string>
+    <string name="business_industrial">Business, Industrial</string>
+    <string name="ask_seller">Ask Seller</string>
+    <string name="contact_saller">Contact Saller</string>
+    <string name="s_i_g_n_i_n">S i g n I n</string>
+    <string name="signups">Sign UP....</string>
+    <string name="select_area">Select Area</string>
+    <string name="select_country">Select Country</string>
+    <string name="dinar">KWD</string>
+    <string name="products_about_saller">Products About Saller</string>
+    <string name="products">Products</string>
+    <string name="edit_your_product">Edit Your Product</string>
+    <string name="delete_your_product">Delete Your Product</string>
+    <string name="sub_category">Sub Category</string>
+    <string name="country">Country</string>
+    <string name="area">Area</string>
+    <string name="city">City</string>
+    <string name="add_sponsor_now">Add Sponsor Now</string>
+    <string name="select_city">Select City</string>
+    <string name="call_now">Call Now</string>
+    <string name="enter">Enter</string>
+    <string name="select_your_country">Select Your Country</string>
+    <string name="l_e">L.E</string>
+    <string name="aed">AED</string>
+    <string name="sar">SAR</string>
+    <string name="bump_up_your_ad">Bump up your ad</string>
+    <string name="attract_up_to_15x_more_views">Attract up to 15X more views!</string>
+    <string name="get_3x_more_views">Get 3x more views</string>
+    <string name="your_ad_will_be_boosted_to_the_top_of_the_1st_page_everyday_for_7_days">Your ad will be boosted to the top of the 1st page everyday for 7 days</string>
+    <string name="countinue">Countinue</string>
+    <string name="feature_your_ad">Feature Your Ad</string>
+    <string name="get_15x_more_views">Get 15x more views</string>
+    <string name="your_ad_will_stay_among_the_top_ads_of_the_category_pages_over_service_validity">Your ad will stay among the top ads of the category pages over service validity</string>
+    <string name="request_a_business_package">Request a Business Package</string>
+    <string name="are_you_a_business_or_a_freelancer_benefit_from_our_discounted_packages">Are You a business or a freelancer? Benefit from our discounted packages</string>
+    <string name="select_package">Select Package</string>
+    <string name="skip">Skip</string>
+    <string name="back">Back</string>
+    <string name="send">Send</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="by_registering_account_with_yallabee3_you_accept_our_terms_and_conditions">By Registering account with yallabee3 , you accept our terms and conditions.</string>
+
 
     <string-array name="categories">
         <item>Vehicles</item>
@@ -144,5 +229,800 @@
         <item>Personal Services</item>
         <item>Pets</item>
         <item>Private Tutors</item>
+    </string-array>
+
+    <string-array name="country">
+        <item>Kuwait Governorate</item>
+        <item>Hawalli Governorate</item>
+        <item> Mubarak al-Kabeer Governorate</item>
+        <item>Ahmadi Governorate</item>
+    </string-array>
+
+    <string-array name="subcountry_kwuit">
+        <item>Kuwait City</item>
+        <item>Dasman</item>
+        <item>Sharq</item>
+        <item>Mirgab</item>
+        <item>Jibla</item>
+        <item>Dasma</item>
+        <item>Daeiya</item>
+        <item>Sawabir</item>
+        <item>Salhiya</item>
+        <item>Bneid il-Gar</item>
+        <item>Kaifan</item>
+        <item>Mansuriya</item>
+        <item>Abdullah as-Salim suburb</item>
+        <item>Nuzha</item>
+        <item>Faihaa</item>
+        <item>Shamiya</item>
+        <item>Rawda</item>
+        <item>Adiliya</item>
+        <item>Khaldiya</item>
+        <item>Qadsiya</item>
+        <item>Qurtuba</item>
+        <item>Surra</item>
+        <item>Yarmuk</item>
+        <item>Shuwaikh</item>
+        <item>Rai</item>
+        <item>Ghirnata</item>
+        <item>Sulaibikhat</item>
+        <item>Doha</item>
+        <item>Nahdha</item>
+        <item>Jabir al-Ahmad City</item>
+        <item>Qairawan</item>
+    </string-array>
+
+    <string-array name="subcountry_Hawalli">
+        <item>Hawally</item>
+        <item>Rumaithiya</item>
+        <item>Jabriya</item>
+        <item>Salmiya</item>
+        <item>Mishrif</item>
+        <item>Shaab</item>
+        <item>Bayan</item>
+        <item>Bidie</item>
+        <item>Nigra</item>
+        <item>Salwa</item>
+        <item>Maidan Hawalli</item>
+        <item>Mubarak aj-Jabir suburb</item>
+        <item>South Surra</item>
+        <item>Hittin</item>
+    </string-array>
+
+    <string-array name="Mubarak_kwuit">
+        <item>Mubarak al-Kabeer</item>
+        <item>Adan</item>
+        <item>Qurain</item>
+        <item>Qusur</item>
+        <item>Sabah as-Salim suburb</item>
+        <item>Misila</item>
+        <item>Abu Fteira</item>
+        <item>Sabhan</item>
+        <item>Fintas</item>
+        <item>Funaitis</item>
+    </string-array>
+
+    <string-array name="Ahmadi_kwuit">
+        <item>Ahmadi</item>
+        <item>Aqila</item>
+        <item>Zuhar</item>
+        <item>Miqwa</item>
+        <item>Mahbula</item>
+        <item>Rigga</item>
+        <item>Hadiya</item>
+        <item>Abu Hulaifa</item>
+        <item>Sabahiya</item>
+        <item>Mangaf</item>
+        <item>Fahaheel</item>
+        <item>Wafra</item>
+        <item>Zoor</item>
+        <item>Khairan</item>
+        <item>Abdullah Port</item>
+        <item>Agricultural Wafra</item>
+        <item>Bneidar</item>
+        <item>Jileia</item>
+        <item>Jabir al-Ali Suburb</item>
+        <item>Fahd al-Ahmad Suburb</item>
+        <item>Shuaiba</item>
+        <item>Sabah al-Ahmad City</item>
+        <item>Nuwaiseeb</item>
+        <item>Khairan City</item>
+        <item>Ali as-Salim suburb</item>
+        <item>Sabah al-Ahmad Nautical City</item>
+    </string-array>
+
+    <string-array name="rate">
+        <item>Recently</item>
+        <item>Low Price</item>
+        <item>High Price</item>
+    </string-array>
+
+    <string-array name="country3">
+        <item>Kuwait</item>
+        <item>Egypt</item>
+        <item>KSA</item>
+        <item>Arab Emirates</item>
+    </string-array>
+
+    <string-array name="country33">
+        <item>Choose</item>
+        <item>Kuwait</item>
+        <item>Egypt</item>
+        <item>KSA</item>
+        <item>Arab Emirates</item>
+    </string-array>
+
+    <string-array name="countryegypt">
+        <item>Cairo</item>
+        <item>Giza</item>
+        <item>Dakahlia</item>
+        <item>Fayoum</item>
+        <item>Beni Suef</item>
+        <item>Al Minya</item>
+        <item>Sharqia</item>
+        <item>Red Sea</item>
+        <item>Beheira</item>
+        <item>Gharbia</item>
+        <item>Alexandria</item>
+        <item>Ismailia</item>
+        <item>Monufia</item>
+        <item>Qalyubia</item>
+        <item>Luxor</item>
+        <item>New Valley</item>
+        <item>Suez</item>
+        <item>Aswan</item>
+        <item>Asyut</item>
+        <item>Port Said</item>
+        <item>Damietta</item>
+        <item>Kafr el Sheikh</item>
+        <item>Matrouh</item>
+        <item>Qena</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>North Sinai</item>
+    </string-array>
+
+    <string-array name="subcountryegyptcairo">
+        <item>All Cairo</item>
+        <item>10th Ramadan City</item>
+        <item>15 May City</item>
+        <item>Abasiya</item>
+        <item>Ain Shams</item>
+        <item>Al Amiriyyah</item>
+        <item>Al Manial</item>
+        <item>Almazah</item>
+        <item>Ataba</item>
+        <item>Bab al Shereia</item>
+        <item>Badr City</item>
+        <item>Basateen</item>
+        <item>Boulaq</item>
+        <item>Dar al Salaam</item>
+        <item>Darb al Ahmar</item>
+        <item>Darrasa</item>
+        <item>Downtown Cairo</item>
+        <item>El Fostat</item>
+        <item>Ezbet El Nakhl</item>
+        <item>Gamaleya</item>
+        <item>Garden City</item>
+        <item>Gesr Al Suez</item>
+        <item>Hadayek al-Kobba</item>
+        <item>Hadayek Helwan</item>
+        <item>Heliopolis</item>
+        <item>Helmeya al-Gadeda</item>
+        <item>Helmeyat El Zaytoun</item>
+        <item>Helwan</item>
+        <item>Katameya</item>
+        <item>Maasara</item>
+        <item>Maadi</item>
+        <item>Madinaty</item>
+        <item>Marg</item>
+        <item>Masr al Kadema</item>
+        <item>Matareya</item>
+        <item>Mokattam</item>
+        <item>Moski</item>
+        <item>Mostakbal City</item>
+        <item>Nasr City</item>
+        <item>New Cairo - El Tagamoa</item>
+        <item>New Capital City</item>
+        <item>New Heliopolis</item>
+        <item>New Nozha</item>
+        <item>Obour City</item>
+        <item>Qasr al-Nil</item>
+        <item>Ramses</item>
+        <item>Rehab City</item>
+        <item>Rod al-Farag</item>
+        <item>Salam City</item>
+        <item>Sayeda Zeinab</item>
+        <item>Sharabeya</item>
+        <item>Sheraton</item>
+        <item>Shorouk City</item>
+        <item>Shubra</item>
+        <item>Tebeen</item>
+        <item>Tura</item>
+        <item>Waili</item>
+        <item>Zahraa Al Maadi</item>
+        <item>Zamalek</item>
+        <item>Zawya al-Hamra</item>
+    </string-array>
+
+    <string-array name="subcountryegyptgiza">
+        <item>All Giza</item>
+        <item>6th of October</item>
+        <item>Abu Rawash</item>
+        <item>Agouza</item>
+        <item>Ard El Lewa</item>
+        <item>Badrasheen</item>
+        <item>Baragil</item>
+        <item>Bashtil</item>
+        <item>Boulaq Dakrour</item>
+        <item>Dahab Island and Coldair</item>
+        <item>Dahshur</item>
+        <item>Dokki</item>
+        <item>El Ayyat</item>
+        <item>Faisal</item>
+        <item>Giza District</item>
+        <item>Hadayek 6th of October</item>
+        <item>Hadayek al-Ahram</item>
+        <item>Haram</item>
+        <item>Hawamdeya</item>
+        <item>Imbaba</item>
+        <item>Kerdasa</item>
+        <item>Kit Kat</item>
+        <item>Manial Shiha</item>
+        <item>Mansuriyya</item>
+        <item>Markaz al-Giza</item>
+        <item>Maryotaya</item>
+        <item>Mohandessin</item>
+        <item>Moneeb</item>
+        <item>Nahia</item>
+        <item>Oseem</item>
+        <item>Saf</item>
+        <item>Saft El Laban</item>
+        <item>Sheikh Zayed</item>
+        <item>Tersa</item>
+        <item>Warraq</item>
+        <item>West Somid</item>
+    </string-array>
+
+    <string-array name="subcountryegyptdakahlia">
+        <item>All Dakahlia</item>
+        <item>Aga</item>
+        <item>Akhtab</item>
+        <item>Bani Ubayd</item>
+        <item>Belqas</item>
+        <item>Dikirnis</item>
+        <item>El Kordy</item>
+        <item>Gamasa</item>
+        <item>Mansura</item>
+        <item>Manzala</item>
+        <item>Markaz El Gamaleya</item>
+        <item>Markaz El Matareya</item>
+        <item>Minat al-Nasr</item>
+        <item>Mit Ghamr</item>
+        <item>Mit Slseel</item>
+        <item>Nabaruh</item>
+        <item>New Mansoura</item>
+        <item>Shirbin</item>
+        <item>Sinbillawain</item>
+        <item>Talkha</item>
+        <item>Tama al-Amdeed</item>
+    </string-array>
+
+    <string-array name="subcountryegyptalex">
+        <item>All Alexandria</item>
+        <item>Abu Qir</item>
+        <item>Abu Talat</item>
+        <item>Agami</item>
+        <item>Al Hadrah</item>
+        <item>Al Ibrahimiyyah</item>
+        <item>Amreya</item>
+        <item>Asafra</item>
+        <item>Attarin</item>
+        <item>Awayed</item>
+        <item>Azarita</item>
+        <item>Bacchus</item>
+        <item>Bahray - Anfoshy</item>
+        <item>Bolkly</item>
+        <item>Borg al-Arab</item>
+        <item>Camp Caesar</item>
+        <item>Cleopatra</item>
+        <item>Dekheila</item>
+        <item>Dhahria</item>
+        <item>El Max</item>
+        <item>Fleming</item>
+        <item>Gianaclis</item>
+        <item>Glim</item>
+        <item>Gomrok</item>
+        <item>Kabbary</item>
+        <item>Kafr Abdo</item>
+        <item>Karmous</item>
+        <item>Koum al-Dikka</item>
+        <item>Labban</item>
+        <item>Laurent</item>
+        <item>Maamoura</item>
+        <item>Mandara</item>
+        <item>Manshiyya</item>
+        <item>Miami</item>
+        <item>Moharam Bik</item>
+        <item>Montazah</item>
+        <item>Nakheel</item>
+        <item>Raml Station</item>
+        <item>Ras El Tin</item>
+        <item>Roushdy</item>
+        <item>Saba Pasha</item>
+        <item>Salehia</item>
+        <item>San Stefano</item>
+        <item>Schutz</item>
+        <item>Seyouf</item>
+        <item>Shatby</item>
+        <item>Sidi Beshr</item>
+        <item>Sidi Gaber</item>
+        <item>Smoha</item>
+        <item>Sporting</item>
+        <item>Stanley</item>
+        <item>Victoria</item>
+        <item>Wardian</item>
+        <item>Zezenia</item>
+    </string-array>
+
+    <string-array name="subcountryegyptaswan">
+        <item>All Aswan</item>
+        <item>Abou al-Reish</item>
+        <item>Abou Simbel</item>
+        <item>Aswan City</item>
+        <item>Basiliah</item>
+        <item>Daraw</item>
+        <item>Edfu</item>
+        <item>Kalabsha</item>
+        <item>Kom Ombo</item>
+        <item>Nasr al-Noba</item>
+        <item>Rdesiah</item>
+        <item>Sahara</item>
+        <item>Sebaeiah</item>
+    </string-array>
+
+    <string-array name="subcountryegyptasyut">
+        <item>All Asyut</item>
+        <item>Abnub</item>
+        <item>Abu Teeg</item>
+        <item>Asyut City</item>
+        <item>Badari</item>
+        <item>Dairut</item>
+        <item>Fateh</item>
+        <item>Ghanayem</item>
+        <item>Manfalut</item>
+        <item>New Assiut</item>
+        <item>New Tiba</item>
+        <item>Qusiya</item>
+        <item>Sahel Selim</item>
+        <item>Sedfa</item>
+    </string-array>
+
+    <string-array name="subcountryegyptbeheira">
+        <item>All Beheira</item>
+        <item>Abou Homs</item>
+        <item>Abuu al-Matamer</item>
+        <item>Damanhour</item>
+        <item>Delengat</item>
+        <item>Edko</item>
+        <item>Etay al-Barud</item>
+        <item>Hosh Essa</item>
+        <item>Kafr al-Dawwar</item>
+        <item>Kom Hamadah</item>
+        <item>Mahmoudiyah</item>
+        <item>Markaz Badr</item>
+        <item>Nubariyah</item>
+        <item>Rahmaniya</item>
+        <item>Rashid</item>
+        <item>Shubrakhit</item>
+        <item>Wadi al-Natrun</item>
+    </string-array>
+
+    <string-array name="subcountryegyptbenisuef">
+        <item>All Beni Suef</item>
+        <item>Al Feshn</item>
+        <item>Al Wasty</item>
+        <item>Beba</item>
+        <item>Beni Suef City</item>
+        <item>Ehnasia</item>
+        <item>Nasser</item>
+        <item>New Beni Suef</item>
+        <item>Samasta</item>
+    </string-array>
+
+    <string-array name="subcountryegyptdamietta">
+        <item>All Damietta</item>
+        <item>Damietta City</item>
+        <item>Ezbet al-Burj</item>
+        <item>Fareskour</item>
+        <item>Kafr al-Bateekh</item>
+        <item>Kafr Saad</item>
+        <item>Markaz El Rodah</item>
+        <item>Mit Abughalb</item>
+        <item>New Damietta</item>
+        <item>Ras al-Bar</item>
+        <item>Saro</item>
+        <item>Zarqa</item>
+    </string-array>
+
+    <string-array name="subcountryegyptfayoum">
+        <item>All Fayoum</item>
+        <item>Atssa</item>
+        <item>Fayoum City</item>
+        <item>Ibshway</item>
+        <item>New Fayoum</item>
+        <item>Sinnuras</item>
+        <item>Tamiya</item>
+        <item>Yusuf al-Sadiq</item>
+    </string-array>
+
+    <string-array name="subcountryegyptgharbia">
+        <item>All Gharbia</item>
+        <item>Basyoun</item>
+        <item>Kafr al-Zayat</item>
+        <item>Mahalla al-Kobra</item>
+        <item>Qutour</item>
+        <item>Samanoud</item>
+        <item>Santa</item>
+        <item>Tanta</item>
+        <item>Zefta</item>
+    </string-array>
+
+    <string-array name="subcountryegyptismailia">
+        <item>All Ismailia</item>
+        <item>Abu Swear</item>
+        <item>Fayed</item>
+        <item>Ismailia City</item>
+        <item>Kantara East</item>
+        <item>Kantara West</item>
+        <item>Qassaseen</item>
+        <item>Tal al-Kebeer</item>
+    </string-array>
+
+    <string-array name="subcountryegyptkafralsheikh">
+        <item>All Kafr al Sheikh</item>
+        <item>Baltim</item>
+        <item>Bella</item>
+        <item>Brolos</item>
+        <item>Desouk</item>
+        <item>Fouh</item>
+        <item>Hamoul</item>
+        <item>Kafr al Sheikh City</item>
+        <item>Motobas</item>
+        <item>Qaleen</item>
+        <item>Riyadh</item>
+        <item>Sidi Salem</item>
+    </string-array>
+
+    <string-array name="subcountryegyptluxor">
+        <item>All Luxor</item>
+        <item>Armant</item>
+        <item>Bayadeya</item>
+        <item>Isna</item>
+        <item>Luxor City</item>
+        <item>Qurna</item>
+        <item>Tod</item>
+        <item>Zinnia</item>
+    </string-array>
+
+
+    <string-array name="subcountryegyptmatruh">
+        <item>All Matruh</item>
+        <item>Alamein</item>
+        <item>Barany</item>
+        <item>Dabaa</item>
+        <item>Hammam</item>
+        <item>Marsa Matrouh</item>
+        <item>Nagela</item>
+        <item>North Coast</item>
+        <item>Salloum</item>
+        <item>Siwa</item>
+    </string-array>
+
+
+    <string-array name="subcountryegyptminya">
+        <item>All Minya</item>
+        <item>Abu Qurqas</item>
+        <item>Adwa</item>
+        <item>Beni Mazar</item>
+        <item>Deir Mawas</item>
+        <item>Maghagha</item>
+        <item>Malawi</item>
+        <item>Matay</item>
+        <item>Minya City</item>
+        <item>New Minya</item>
+        <item>Samalut</item>
+    </string-array>
+
+    <string-array name="subcountryegyptmonufia">
+        <item>All Monufia</item>
+        <item>Ashmon</item>
+        <item>Bagour</item>
+        <item>Berket al-Sabaa</item>
+        <item>Menouf</item>
+        <item>Quesna</item>
+        <item>Sadat</item>
+        <item>Sers al-Lyan</item>
+        <item>Shebin al-Koum</item>
+        <item>Shohadaa</item>
+        <item>Tala</item>
+    </string-array>
+
+    <string-array name="subcountryegyptnewvalley">
+        <item>All New Valley</item>
+        <item>Balat</item>
+        <item>Dakhla</item>
+        <item>Farafra</item>
+        <item>Kharga</item>
+        <item>Mut</item>
+        <item>Paris</item>
+    </string-array>
+
+    <string-array name="subcountryegyptnorthsinai">
+        <item>All North Sinai</item>
+        <item>Arish</item>
+        <item>Bir al-Abed</item>
+        <item>Hasana</item>
+        <item>Nakhl</item>
+        <item>Rafah</item>
+        <item>Sheikh Zoweyd</item>
+    </string-array>
+
+    <string-array name="subcountryegyptportsaid">
+        <item>All Port Said</item>
+        <item>Arab District</item>
+        <item>Dawahy District</item>
+        <item>Ganoub District</item>
+        <item>Manakh District</item>
+        <item>Port Fouad</item>
+        <item>Sharq District</item>
+        <item>Zohour District</item>
+    </string-array>
+
+    <string-array name="subcountryegyptqalyubia">
+        <item>All Qalyubia</item>
+        <item>Bahtim</item>
+        <item>Banha</item>
+        <item>Kafr Shukr</item>
+        <item>Khanka</item>
+        <item>Khosous</item>
+        <item>Musturad</item>
+        <item>Qaha</item>
+        <item>Qalyub</item>
+        <item>Qanater al-Khairia</item>
+        <item>Shebin al-Qanater</item>
+        <item>Shubra al-Khaimah</item>
+        <item>Tookh</item>
+    </string-array>
+
+    <string-array name="subcountryegyptqena">
+        <item>All Qena</item>
+        <item>Abu Tisht</item>
+        <item>Dishna</item>
+        <item>Farshout</item>
+        <item>Keft</item>
+        <item>Nag Hammadi</item>
+        <item>Nakada</item>
+        <item>Qena City</item>
+        <item>Quos</item>
+        <item>Wakf</item>
+    </string-array>
+
+    <string-array name="subcountryegyptredsea">
+        <item>All Red Sea</item>
+        <item>Gouna</item>
+        <item>Halayeb _ Shalateen</item>
+        <item>Hurghada</item>
+        <item>Marsa Alam</item>
+        <item>Qusair</item>
+        <item>Ras Gharib</item>
+        <item>Safaga</item>
+        <item>Sahl Hasheesh</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsharqia">
+        <item>All Sharqia</item>
+        <item>10th of Ramadan</item>
+        <item>Abu Hammad</item>
+        <item>Abu Kabir</item>
+        <item>Alqnayat</item>
+        <item>Awlad Saqr</item>
+        <item>Bilbeis</item>
+        <item>Deyerb Negm</item>
+        <item>Faqous</item>
+        <item>Hihya</item>
+        <item>Husseiniya</item>
+        <item>Ibrahemyah</item>
+        <item>Kafr Saqr</item>
+        <item>Mashtool al-Souk</item>
+        <item>Minya al-Qamh</item>
+        <item>New Salhia</item>
+        <item>Qareen</item>
+        <item>Zagazig</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsohag">
+        <item>All Sohag</item>
+        <item>Akhmim</item>
+        <item>Alasirat</item>
+        <item>Baliana</item>
+        <item>Girga</item>
+        <item>Maragha</item>
+        <item>Markaz Dar El Salam</item>
+        <item>Markaz Juhaynah</item>
+        <item>Markaz Sohag</item>
+        <item>Monshaa</item>
+        <item>New Sohag</item>
+        <item>Sakaltah</item>
+        <item>Tahta</item>
+        <item>Tama</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsouthsinai">
+        <item>All South Sinai</item>
+        <item>Abu Rudeis</item>
+        <item>Abu Zenimah</item>
+        <item>Dahab</item>
+        <item>Nuweiba</item>
+        <item>Ras Sedr</item>
+        <item>Sharm al-Sheikh</item>
+        <item>St. Catherine</item>
+        <item>Taba</item>
+        <item>Tor Sinai</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsuez">
+        <item>All Suez</item>
+        <item>Ain Sukhna</item>
+        <item>Arbaeen</item>
+        <item>Attaka</item>
+        <item>Faisal District</item>
+        <item>Ganayen</item>
+        <item>Suez District</item>
+    </string-array>
+
+
+    <string-array name="countrygzaeir">
+        <item>All Algeria</item>
+        <item>Oran</item>
+        <item>Constantine</item>
+        <item>Annaba</item>
+        <item>Blida</item>
+        <item>Batna</item>
+        <item>Djelfa</item>
+        <item>Setif</item>
+        <item>Sidi Bel Abbes</item>
+        <item>Biskra</item>
+        <item>Tebessa</item>
+        <item>El Oued</item>
+        <item>Skikda</item>
+        <item>Tiaret</item>
+        <item>Bejaia</item>
+        <item>Tlemcen</item>
+        <item>Ouargla</item>
+        <item>Bechar</item>
+        <item>Mostaganem</item>
+        <item>Saida</item>
+        <item>Chlef</item>
+        <item>Souk Ahras</item>
+        <item>Medea</item>
+        <item>El Eulma</item>
+        <item>Touggourt</item>
+        <item>Ghardaia</item>
+        <item>Laghouat</item>
+        <item>MeSila</item>
+        <item>Jijel</item>
+        <item>Relizane</item>
+        <item>Guelma</item>
+        <item>Ain Beida</item>
+        <item>Khenchela</item>
+        <item>Bousaada</item>
+        <item>Mascara</item>
+        <item>Tindouf</item>
+        <item>Tizi Ouzou</item>
+        <item>Bordj Bou Arreridj</item>
+    </string-array>
+
+
+    <string-array name="countryoman">
+        <item>All Amman</item>
+        <item>Zarqa</item>
+        <item>Irbid</item>
+        <item>Russeifa</item>
+        <item>Al Quwaysimah</item>
+        <item>Tila al Ali</item>
+        <item>Wadi as Ser</item>
+        <item>Al Jubayhah</item>
+        <item>Khuraybat as Suq</item>
+        <item>Sahab</item>
+        <item>Ar Ramtha</item>
+        <item>Suwaylih</item>
+        <item>Aqaba</item>
+        <item>Zaatari refugee camp</item>
+        <item>Mafraq</item>
+        <item>Madaba</item>
+        <item>as Salt</item>
+        <item>Umm Qushayr</item>
+        <item>Al Jizah</item>
+        <item>Marj al Hamam</item>
+        <item>Askan Abu Nushayr</item>
+        <item>Shafa Badran</item>
+        <item>al Baqaa</item>
+        <item>Ayn Al Basha</item>
+        <item>Aydoun</item>
+        <item>ad Dulayl</item>
+        <item>Jerash</item>
+        <item>ash Sarih</item>
+        <item>al Hashimiyah</item>
+        <item>Maean</item>
+        <item>Bayt Ras</item>
+        <item>Muhayyam Hatin</item>
+        <item>Al Husn</item>
+        <item>Azraq refugee camp</item>
+        <item>at Turrah</item>
+        <item>Naour</item>
+        <item>Karak</item>
+        <item>Kunfranjah</item>
+        <item>Der Abi Saeed</item>
+        <item>No ayymeh</item>
+        <item>AshShajarah</item>
+        <item>Tafilah</item>
+        <item>Muotah</item>
+        <item>Ghawr ash Shafi</item>
+        <item>Anjara</item>
+        <item>Muhayyam al Ashhahid Azmi</item>
+        <item>Al Mashariqah</item>
+        <item>Huwwarah</item>
+        <item>Kafr Yooba</item>
+        <item>Krayymeh</item>
+    </string-array>
+
+    <string-array name="countrysodia">
+        <item>All KSA</item>
+        <item>Riyadh</item>
+        <item>Jeddah</item>
+        <item>Mecca</item>
+        <item>Medina</item>
+        <item>Sultanah</item>
+        <item>Dammam</item>
+        <item>Taeif</item>
+        <item>Tabuk</item>
+        <item>Al Kharj</item>
+        <item>Buraydah</item>
+        <item>Khamis Mushait</item>
+        <item>Al Hufuf</item>
+        <item>Al Mubarraz</item>
+        <item>Hafar Al-Batin</item>
+        <item>Haeil</item>
+        <item>Najran</item>
+        <item>Al Jubayl</item>
+        <item>Abha</item>
+        <item>Yanbu</item>
+        <item>Khobar</item>
+        <item>Arar</item>
+        <item>Sakakah</item>
+        <item>Jizan</item>
+        <item>Qurayyat</item>
+        <item>Dhahran</item>
+        <item>Al Qatif</item>
+        <item>Al Bahah</item>
+    </string-array>
+
+    <string-array name="conutryemarat">
+        <item>All Arab Emirates</item>
+        <item>Dubai</item>
+        <item>Abu Dhabi</item>
+        <item>Sharjah</item>
+        <item>Al Ain</item>
+        <item>Ajman</item>
+        <item>Ras al-Khaimah</item>
+        <item>Al Fujayrah</item>
+        <item>Umm al Qaywayn</item>
+        <item>Khawr Fakkan</item>
+        <item>Dibba Al-Fujairah</item>
+        <item>Dibba Al-Hisn</item>
+        <item>Adh Dhayd</item>
+        <item>Ar Ruways</item>
+        <item>Muzayri</item>
     </string-array>
 </resources>

@@ -7,29 +7,39 @@ public class User {
     private String email;
     private String phone;
     private String imgUrl;
+    private String country;
+    private String subCountry;
+    private String area;
 
     public User() {
     }
 
-    public User(String userId, String fullName, String email, String imgUrl) {
+    public User(String userId, String fullName, String email, String imgUrl, String country, String subCountry ,String area) {
         this.userId = userId;
         this.fullName = fullName;
         this.email = email;
-        this.imgUrl = imgUrl;
+        this.phone = imgUrl;
+        this.country = country;
+        this.subCountry = subCountry;
+        this.area = area;
     }
 
-    public User(String userId, String fullName, String email) {
+    public User(String userId, String fullName, String email,String area) {
         this.userId = userId;
         this.fullName = fullName;
         this.email = email;
+        this.area = area;
     }
 
-    public User(String userId, String fullName, String email, String phone, String imgUrl) {
+    public User(String userId, String fullName, String email, String phone, String imgUrl, String country, String subCountry,String area) {
         this.userId = userId;
         this.fullName = fullName;
         this.email = email;
         this.phone = phone;
         this.imgUrl = imgUrl;
+        this.country = country;
+        this.subCountry = subCountry;
+        this.area = area;
     }
 
     public String getUserId() {
@@ -70,5 +80,29 @@ public class User {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getSubCountry() {
+        return subCountry;
+    }
+
+    public void setSubCountry(String subCountry) {
+        this.subCountry = subCountry;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
     }
 }

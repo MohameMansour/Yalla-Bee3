@@ -3,11 +3,13 @@ package com.example.yallabee3.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +32,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+import static android.content.Context.MODE_PRIVATE;
+
 
 public class SponsorFragment extends Fragment {
 
@@ -45,7 +49,7 @@ public class SponsorFragment extends Fragment {
     String compid;
     FirebaseAuth auth;
     FirebaseUser user;
-
+    String currentcountryfromfirebase;
     public SponsorFragment() {
     }
 
@@ -55,12 +59,25 @@ public class SponsorFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_sponsor, container, false);
         context = Objects.requireNonNull(getActivity()).getApplicationContext();
 
-        myRef = FirebaseDatabase.getInstance().getReference();
 
         auth = FirebaseAuth.getInstance();
 //        user = auth.getCurrentUser();
 //        compid = user.getUid();
 
+        SharedPreferences sp2 = getActivity().getSharedPreferences("SP_FIREBASE", MODE_PRIVATE);
+        currentcountryfromfirebase = sp2.getString("countryfromdatabase", "new");
+
+        if (currentcountryfromfirebase.equals("مصر")) {
+            myRef = FirebaseDatabase.getInstance().getReference("SponsorEgy");
+        } else if (currentcountryfromfirebase.equals("السعودية العربية")) {
+            myRef = FirebaseDatabase.getInstance().getReference("SponsorSod");
+        } else if (currentcountryfromfirebase.equals("الامارات")){
+            myRef = FirebaseDatabase.getInstance().getReference("SponsorEm");
+        } else {
+            myRef = FirebaseDatabase.getInstance().getReference("Sponsor");
+        }
+//        myRef = FirebaseDatabase.getInstance().getReference("Sponsor");
+        myRef.keepSynced(true);
         addsponorbutton = view.findViewById(R.id.addsponsor_button_add);
         addsponorbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +87,7 @@ public class SponsorFragment extends Fragment {
             }
         });
 
-        myRef.child("Sponsor").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 products.clear();
@@ -93,8 +110,11 @@ public class SponsorFragment extends Fragment {
 
         popularCoursesRecyclerView = view.findViewById(R.id.home_popularCourses_recycler_view);
         sponserAdapter = new SponserAdapter(products, context);
-        popularCoursesRecyclerView.setLayoutManager(new LinearLayoutManager(context,
-                LinearLayoutManager.VERTICAL, false));
+//        popularCoursesRecyclerView.setLayoutManager(new LinearLayoutManager(context,
+//                LinearLayoutManager.VERTICAL, false));
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,
+                LinearLayoutManager.VERTICAL);
+        popularCoursesRecyclerView.setLayoutManager(staggeredGridLayoutManager);
         popularCoursesRecyclerView.setAdapter(sponserAdapter);
 
         return view;

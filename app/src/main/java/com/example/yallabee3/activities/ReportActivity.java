@@ -91,8 +91,14 @@ public class ReportActivity extends AppCompatActivity {
             Toast.makeText(this, "Select Reason & Description", Toast.LENGTH_SHORT).show();
         }
         else{
+            FirebaseDatabase fb_db_instance = FirebaseDatabase.getInstance();
+            DatabaseReference db_ref_Main = fb_db_instance.getReference();
+            DatabaseReference blankRecordReference = db_ref_Main;
+            DatabaseReference db_ref = blankRecordReference.push();
+            String Id = db_ref.getKey();
+
         Report report = new Report(productId,userId,descriptionMessage,RadioMessage);
-        databaseReference.child("Reports").child(productId).setValue(report);
+        databaseReference.child("Reports").child(productId).child(Id).setValue(report);
         // Missing code
         Toast.makeText(ReportActivity.this, "Thank You", Toast.LENGTH_SHORT).show();
         Intent x = new Intent(ReportActivity.this, NavActivity.class);

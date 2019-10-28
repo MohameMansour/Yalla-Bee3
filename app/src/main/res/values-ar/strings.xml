@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">يلا بيع</string>
+    <string name="hello_blank_fragment">اهلا بك</string>
+    <string name="home">الرئيسيه</string>
+    <string name="add">اضافه</string>
+    <string name="profile">حسابى</string>
+    <string name="image_icon">الصوره</string>
+    <string name="category">الاقسام</string>
+    <string name="sign_up">سجل الان</string>
+    <string name="full_name">الاسم</string>
+    <string name="email">الايميل</string>
+    <string name="password">كلمة المرور</string>
+    <string name="re_type_password">اعد كتابه كلمة المرور</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="s_i_g_n_u_p">سجل الان</string>
+    <string name="have_account_sign_in">لدى حساب, تسجيل الدخول</string>
+    <string name="title">اسم المنتج</string>
+    <string name="price">السعر</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="location">المنطقة</string>
+    <string name="add_sponser">اضافه اعلان</string>
+    <string name="sponsor_image">صوره الاعلان</string>
+    <string name="select_category">حدد القسم</string>
+    <string name="select_sub_category">حدد القسم الفرعي</string>
+    <string name="add_product">اضف المنتج</string>
+    <string name="add_location">اضف المكان</string>
+    <string name="user_name">الاسم</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="my_products">منتجاتي</string>
+    <string name="my_favourites">المنتجات المفضله لدى</string>
+    <string name="chat">المحادثه</string>
+    <string name="reson_of_report">سبب التقرير</string>
+    <string name="wrong_price_picture_category">سعر خاطئ / صورة / الفئة</string>
+    <string name="inappropriate_ad_content">محتوى الإعلان غير مناسب</string>
+    <string name="item_sold">السلعة مباعه</string>
+    <string name="fraud_or_scam">منتج مغشوش</string>
+    <string name="indecent_seller">البائع غير لائق</string>
+    <string name="other">اخرى</string>
+    <string name="send_report">ارسل تقرير</string>
+    <string name="description">التفاصيل</string>
+    <string name="vehicles">عربيات وقطع غيار</string>
+    <string name="see_all">عرض الكل</string>
+    <string name="properties">عقارات</string>
+    <string name="mobile_phones_accessories">موبايلات واكسسواراتها</string>
+    <string name="electronics_home_appliances">الكترونيات وأجهزة منزلية</string>
+    <string name="home_garden">المنزل والحديقة</string>
+    <string name="fashion_beauty">الموضة والجمال</string>
+    <string name="pets">حيوانات أليفة</string>
+    <string name="kids_babies">مستلزمات أطفال</string>
+    <string name="sporting_goods_bikes">دراجات ومعدات رياضية</string>
+    <string name="hobbies_music_art_books">موسيقى وفنون وكتب</string>
+    <string name="business_industrial">تجارة وصناعة</string>
+    <string name="ask_seller">اسال البائع</string>
+    <string name="contact_saller">تواصل بالبائع</string>
+    <string name="s_i_g_n_i_n">تسجيل الدخول</string>
+    <string name="signups">انشاء حساب....</string>
+    <string name="select_area">اختار المنطقه</string>
+    <string name="select_country">اختار الدوله</string>
+    <string name="dinar">د.ك</string>
+    <string name="products_about_saller">منتجات أخرى للبائع</string>
+    <string name="products">المنتجات</string>
+    <string name="edit_your_product">تعديل المنتج</string>
+    <string name="delete_your_product">حذف المنتج</string>
+    <string name="sub_category">القسم الفرعى</string>
+    <string name="country">المدينة</string>
+    <string name="area">المنطقة</string>
+    <string name="city">المدينة</string>
+    <string name="add_sponsor_now">أضف أعلانك الان</string>
+    <string name="select_city">اختار المدينة</string>
+    <string name="call_now">اتصل الان</string>
+    <string name="enter">ادخل</string>
+    <string name="select_your_country">اختار بلدك</string>
+    <string name="l_e">ج.م</string>
+    <string name="aed">د.أ</string>
+    <string name="sar">ر.س</string>
+    <string name="bump_up_your_ad">جدد اعلانك</string>
+    <string name="attract_up_to_15x_more_views">اوصل ل 15 ضعف عدد المشاهدات عند اختيارك لباقات الاعلانات على يلا بيع</string>
+    <string name="get_3x_more_views">احصل على 3 اضعاف عدد المشاهدات</string>
+    <string name="your_ad_will_be_boosted_to_the_top_of_the_1st_page_everyday_for_7_days">هيظهر اعلانك مره واحدة يوميا فى الصفحة الاولى لمدة 7 ايام</string>
+    <string name="countinue">اشترى</string>
+    <string name="feature_your_ad">ميز اعلانك</string>
+    <string name="get_15x_more_views">احصل على 15 اضعاف عدد المشاهدات</string>
+    <string name="your_ad_will_stay_among_the_top_ads_of_the_category_pages_over_service_validity">اعلانك هيكون ضمن اول الاعلانات فى الفئة</string>
+    <string name="request_a_business_package">باقة بيزنس</string>
+    <string name="are_you_a_business_or_a_freelancer_benefit_from_our_discounted_packages">للشركات و الاعمال الحرة استفيد من عروض يلا بيع و احصل على خصومات على باقات البيزنس</string>
+    <string name="select_package">اختار الحزمة الاعلانية</string>
+    <string name="skip">تخطى</string>
+    <string name="back">رجوع</string>
+    <string name="send">ارسال</string>
+    <string name="reset_password">استرجاع الرقم السرى</string>
+    <string name="forget_your_password">هل نسيت كلمة السر؟</string>
+    <string name="by_registering_account_with_yallabee3_you_accept_our_terms_and_conditions">عند تسجيل حساب داخل يلا بيع انت توافق على الشروط و الاحكام</string>
+
+
+    <string-array name="categories">
+        <item>عربيات وقطع غيار</item>
+        <item>عقارات</item>
+        <item>موبايلات واكسسواراتها</item>
+        <item>الكترونيات وأجهزة منزلية</item>
+        <item>المنزل والحديقة</item>
+        <item>الموضة والجمال</item>
+        <item>حيوانات أليفة</item>
+        <item>مستلزمات أطفال</item>
+        <item>دراجات ومعدات رياضية</item>
+        <item>موسيقى وفنون وكتب</item>
+        <item>وظائف</item>
+        <item>تجارة وصناعة</item>
+        <item>خدمات</item>
+    </string-array>
+
+    <string-array name="subcategories_vehicles">
+        <item>قوارب</item>
+        <item>اكسسوارات عربيات</item>
+        <item>عربيات</item>
+        <item>موتوسيكلات</item>
+        <item>وسائل نقل أخرى</item>
+        <item>يخوت</item>
+        <item>اتوبيسات وعربيات نقل</item>
+    </string-array>
+
+
+    <string-array name="subcategories_Properties">
+        <item>عقارات للإيجار</item>
+        <item>عقارات للبيع</item>
+    </string-array>
+
+    <string-array name="subcategories_mobilephone_accessories">
+        <item>موبايلات</item>
+        <item>إكسسوارات موبايلات</item>
+    </string-array>
+
+    <string-array name="subcategories_Electronics_HomeAppliances">
+        <item>تلفزيونات وصوتيات</item>
+        <item>كمبيوتر وتابلت</item>
+        <item>أجهزة وألعاب فيديو</item>
+        <item>كاميرات وتصوير</item>
+        <item>أجهزة منزلية</item>
+
+    </string-array>
+
+    <string-array name="subcategories_Home_Garden">
+        <item>اكسسوارات وزينة</item>
+        <item>أثاث</item>
+        <item>الحدائق والمناطق الخارجية</item>
+        <item>معدات وأدوات طبخ</item>
+        <item>منزل وحديقة أخرى</item>
+    </string-array>
+
+    <string-array name="subcategories_Fashion_Beauty">
+        <item>ملابس واكسسوارات</item>
+        <item>ساعات ومجوهرات</item>
+        <item>صحة وجمال</item>
+    </string-array>
+
+    <string-array name="subcategories_Pets">
+        <item>قطط</item>
+        <item>كلاب</item>
+        <item>خيل</item>
+        <item>اسماك</item>
+        <item>طيور</item>
+        <item>حيوانات اليفه اخرى</item>
+    </string-array>
+
+    <string-array name="subcategories_Kids_Babies">
+        <item>ملابس الاطفال والرضع</item>
+        <item>لعب اطفال</item>
+        <item>سراير وعربات أطفال</item>
+        <item>اكسسوارات</item>
+        <item>مستلزمات أطفال أخرى</item>
+    </string-array>
+
+    <string-array name="subcategories_Sporting_Goods_Bikes">
+        <item>معدات رياضية</item>
+        <item>دراجات</item>
+        <item>معدات رياضية خارجية</item>
+    </string-array>
+
+    <string-array name="subcategories_Hobbies_Music_Art_Books">
+        <item>تحف ومقتنيات</item>
+        <item>كتب</item>
+        <item>أفلام وموسيقى</item>
+        <item>آلات موسيقية</item>
+        <item>اغراض اخرى</item>
+        <item>ادوات دراسية</item>
+        <item>تذاكر وقسائم</item>
+    </string-array>
+
+    <string-array name="subcategories_Jobs">
+        <item>محاسبه</item>
+        <item>عمارة - هندسة</item>
+        <item>فنون - تصميم</item>
+        <item>تطوير الاعمال</item>
+        <item>إنشاءات</item>
+        <item>اعمال استشاريه</item>
+        <item>تعليم</item>
+        <item>اعمال اداريه</item>
+        <item>توظيف - موارد بشرية</item>
+        <item>سياحة وفنادق وضيافة</item>
+        <item>تكنولوجيا المعلومات - إتصالات</item>
+        <item>يبحث عن عمل</item>
+        <item>تسويق - علاقات عامة</item>
+        <item>طب - صحه</item>
+        <item>اخرى</item>
+        <item>تجزئه</item>
+        <item>مبيعات</item>
+        <item>سكرتاريه</item>
+    </string-array>
+
+    <string-array name="subcategories_Business_Industrial">
+        <item>معدات مصانع</item>
+        <item>معدات طبيه</item>
+        <item>معدات ثقيله</item>
+        <item>مستلزمات مطاعم</item>
+        <item>تصفيه محلات</item>
+        <item>تجاره و صناعه اخرى</item>
+    </string-array>
+
+    <string-array name="subcategories_Services">
+        <item>خدمات شركات</item>
+        <item>تصليح سيارات</item>
+        <item>خدمات منزليه</item>
+        <item>حفلات</item>
+        <item>خدمات محليه</item>
+        <item>توصيل و شحن</item>
+        <item>خدمات اخرى</item>
+        <item>خدمات شخصيه</item>
+        <item>حيوانات اليفه</item>
+        <item>دروس خصوصيه</item>
+    </string-array>
+
+    <string-array name="country">
+        <item>الكويت</item>
+        <item>حولى</item>
+        <item>مبارك الكبير</item>
+        <item>الأحمدي</item>
+    </string-array>
+
+    <string-array name="subcountry_kwuit">
+        <item>مدينة الكويت</item>
+        <item>دسمان</item>
+        <item>شرق</item>
+        <item>المرقاب</item>
+        <item>جبلة</item>
+        <item>الدسمة</item>
+        <item>الدعية</item>
+        <item>الصوابر</item>
+        <item>الصالحية</item>
+        <item>بنيد القار</item>
+        <item>كيفان</item>
+        <item>المنصورية</item>
+        <item>ضاحية عبد الله السالم</item>
+        <item>النزهة</item>
+        <item>الشامية</item>
+        <item>الروضة</item>
+        <item>العديلية</item>
+        <item>الخالدية</item>
+        <item>القادسية</item>
+        <item>قرطبة</item>
+        <item>السرة</item>
+        <item>اليرموك</item>
+        <item>الشويخ</item>
+        <item>الري</item>
+        <item>غرناطة</item>
+        <item>الصليبخات</item>
+        <item>الدوحة</item>
+        <item>النهضة</item>
+        <item>مدينة جابر الأحمد</item>
+        <item>القيروان</item>
+    </string-array>
+
+    <string-array name="subcountry_Hawalli">
+        <item>حولي</item>
+        <item>الرميثية</item>
+        <item>الجابرية</item>
+        <item>السالمية</item>
+        <item>مشرف</item>
+        <item>الشعب</item>
+        <item>بيان</item>
+        <item>البدع</item>
+        <item>النقرة</item>
+        <item>سلوى</item>
+        <item>ميدان حولي</item>
+        <item>ضاحية مبارك الجابر</item>
+        <item>جنوب السرة</item>
+        <item>حطين</item>
+    </string-array>
+
+    <string-array name="Mubarak_kwuit">
+        <item>مبارك الكبير</item>
+        <item>العدان</item>
+        <item>القرين</item>
+        <item>القصور</item>
+        <item>ضاحية صباح السالم</item>
+        <item>المسيلة</item>
+        <item>أبو فطيرة</item>
+        <item>صبحان</item>
+        <item>الفنطاس</item>
+        <item>الفنيطيس</item>
+    </string-array>
+
+    <string-array name="Ahmadi_kwuit">
+        <item>الأحمدي</item>
+        <item>العقيلة</item>
+        <item>الظهر</item>
+        <item>المقوع</item>
+        <item>المهبولة</item>
+        <item>الرقة</item>
+        <item>هدية</item>
+        <item>أبو حليفة</item>
+        <item>الصباحية</item>
+        <item>المنقف</item>
+        <item>الفحيحيل</item>
+        <item>الوفرة</item>
+        <item>الزور</item>
+        <item>الزور</item>
+        <item>ميناء عبد الله</item>
+        <item>الوفرة الزراعية</item>
+        <item>بنيدر</item>
+        <item>الجليعة</item>
+        <item>ضاحية جابر العلي</item>
+        <item>ضاحية فهد الأحمد</item>
+        <item>الشعيبة</item>
+        <item>مدينة صباح الأحمد</item>
+        <item>النويصيب</item>
+        <item>مدينة الخيران</item>
+        <item>ضاحية علي صباح السالم</item>
+        <item>مدينة صباح الأحمد البحرية</item>
+    </string-array>
+
+    <string-array name="rate">
+        <item>الاحدث</item>
+        <item>الاقل سعرا</item>
+        <item>الاعلى سعرا</item>
+    </string-array>
+
+
+    <string-array name="country3">
+        <item>الكويت</item>
+        <item>مصر</item>
+        <item>السعودية العربية</item>
+        <item>الامارات</item>
+    </string-array>
+
+
+    <string-array name="country33">
+        <item>اختار الدولة</item>
+        <item>الكويت</item>
+        <item>مصر</item>
+        <item>السعودية العربية</item>
+        <item>الامارات</item>
+    </string-array>
+
+    <string-array name="countryegypt">
+        <item>القاهرة</item>
+        <item>الجيزة</item>
+        <item>الدقهلية</item>
+        <item>الفيوم</item>
+        <item>بنى سويف</item>
+        <item>المنيا</item>
+        <item>الشرقية</item>
+        <item>البحر الاحمر</item>
+        <item>البحيرة</item>
+        <item>الغربية</item>
+        <item>الاسكندرية</item>
+        <item>الاسماعلية</item>
+        <item>المنوفية</item>
+        <item>القليوبية</item>
+        <item>الاقصر</item>
+        <item>الوادي الجديد</item>
+        <item>السويس</item>
+        <item>اسوان</item>
+        <item>اسيوط</item>
+        <item>بور سعيد</item>
+        <item>دمياط</item>
+        <item>كفر الشيخ</item>
+        <item>مطروح</item>
+        <item>قنا</item>
+        <item>سوهاج</item>
+        <item>جنوب سيناء</item>
+        <item>شمال سيناء</item>
+    </string-array>
+
+    <string-array name="subcountryegyptcairo">
+        <item>كل القاهرة</item>
+        <item>العاشر من رمضان</item>
+        <item>مدينة 15 مايو</item>
+        <item>العباسية</item>
+        <item>عين شمس</item>
+        <item>الاميريه</item>
+        <item>المنيل</item>
+        <item>الماظه</item>
+        <item>العتبة</item>
+        <item>باب الشعرية</item>
+        <item>مدينة بدر</item>
+        <item>البساتين</item>
+        <item>بولاق</item>
+        <item>دار السلام</item>
+        <item>الدرب الاحمر</item>
+        <item>الدراسة</item>
+        <item>وسط القاهة</item>
+        <item>الفسطاط</item>
+        <item>عزبة النخل</item>
+        <item>الجمالية</item>
+        <item>جاردن سيتي</item>
+        <item>جسر السويس</item>
+        <item>حدائق القبه</item>
+        <item>حدائق حلوان</item>
+        <item>هليوبليس</item>
+        <item>الحلمية الجديدة</item>
+        <item>حلمية الزيتون</item>
+        <item>حلوان</item>
+        <item>القطاميه</item>
+        <item>المعصرة</item>
+        <item>المعادى</item>
+        <item>مدينتي</item>
+        <item>المرج</item>
+        <item>مصر القديمة</item>
+        <item>المطرية</item>
+        <item>المقطم</item>
+        <item>الموسكى</item>
+        <item>مدينة المستقبل</item>
+        <item>مدينة نصر</item>
+        <item>القاهرة الجديدة _ التجمع</item>
+        <item>العاصمة الاداريةالجديدة</item>
+        <item>هليوبليس الجديددة</item>
+        <item>النزهة الجديدة</item>
+        <item>مدينة العبور</item>
+        <item>قصر النيل</item>
+        <item>رمسيس</item>
+        <item>مدينة الرحاب</item>
+        <item>روض الفرج</item>
+        <item>مدينة السلام</item>
+        <item>السيدة زينب</item>
+        <item>الشربية</item>
+        <item>شيراتون</item>
+        <item>مدينة الشروق</item>
+        <item>شبرا</item>
+        <item>تبين</item>
+        <item>طرة</item>
+        <item>الوايلى</item>
+        <item>زهراء المعادى</item>
+        <item>الزمالك</item>
+        <item>الزاوية الحمراء</item>
+    </string-array>
+
+    <string-array name="subcountryegyptgiza">
+        <item>كل الجيزة</item>
+        <item>السادس من اكتوبر</item>
+        <item>ابو رواش</item>
+        <item>العجوزة</item>
+        <item>ارض اللواء</item>
+        <item>البدراشين</item>
+        <item>البراجيل</item>
+        <item>بشتيل</item>
+        <item>بولاق الدكرور</item>
+        <item>جزيرة الدهب وكولدير</item>
+        <item>دهشور</item>
+        <item>الدقى</item>
+        <item>العياط</item>
+        <item>فيصل</item>
+        <item>حى الجيزة</item>
+        <item>حدائق 6 اكتوبر</item>
+        <item>حدائق الاهرام</item>
+        <item>الهرم</item>
+        <item>الحومدية</item>
+        <item>امبابة</item>
+        <item>كرداسة</item>
+        <item>الكيت كات</item>
+        <item>منيال شيحة</item>
+        <item>المنصورية</item>
+        <item>مركز الجيزة</item>
+        <item>المريوطية</item>
+        <item>المهندسين</item>
+        <item>المنيب</item>
+        <item>ناهيا</item>
+        <item>اوسيم</item>
+        <item>الصف</item>
+        <item>صفط اللبن</item>
+        <item>الشيخ زايد</item>
+        <item>ترسا</item>
+        <item>الوراق</item>
+        <item>غرب سوميد</item>
+    </string-array>
+
+    <string-array name="subcountryegyptdakahlia">
+        <item>كل الدقهلية</item>
+        <item>أجا</item>
+        <item>أخطاب</item>
+        <item>بني عبيد</item>
+        <item>بلقيس</item>
+        <item>دكرنس</item>
+        <item>الكوردى</item>
+        <item>جمصة</item>
+        <item>المنصورة</item>
+        <item>المنزلة</item>
+        <item>مركز الجمالية</item>
+        <item>مركز المطرية</item>
+        <item>منية النصر</item>
+        <item>ميت غمر</item>
+        <item>ميت سلسيل</item>
+        <item>نبروه</item>
+        <item>المنصورة الجديدة</item>
+        <item>شربين</item>
+        <item>السنبلاويين</item>
+        <item>طلخة</item>
+        <item>تمى الامديد</item>
+    </string-array>
+
+    <string-array name="subcountryegyptalex">
+        <item>كل الاسكندرية</item>
+        <item>ابو قير</item>
+        <item>أبو تلات</item>
+        <item>العجمى</item>
+        <item>الحضرة</item>
+        <item>الابراهيمية</item>
+        <item>العامرية</item>
+        <item>العصافرة</item>
+        <item>العطارين</item>
+        <item>العوايد</item>
+        <item>الازاريطة</item>
+        <item>باكوس</item>
+        <item>بحرى والأنفوشى</item>
+        <item>بولكلي</item>
+        <item>برج العرب</item>
+        <item>كامب شيزار</item>
+        <item>كليوباترا</item>
+        <item>الدخيلة</item>
+        <item>الظاهرية</item>
+        <item>المكس</item>
+        <item>فلمنج</item>
+        <item>جناكليس</item>
+        <item>جليم</item>
+        <item>الجمرك</item>
+        <item>القباري</item>
+        <item>كفر عبده</item>
+        <item>كرموز</item>
+        <item>كوم الدكة</item>
+        <item>اللبان</item>
+        <item>لوران</item>
+        <item>المعمورة</item>
+        <item>المندرة</item>
+        <item>المنشية</item>
+        <item>ميامى</item>
+        <item>محرم بيك</item>
+        <item>المنتزة</item>
+        <item>النخيل</item>
+        <item>محطة الرمل</item>
+        <item>راس التين</item>
+        <item>رشدى</item>
+        <item>سابا باشا</item>
+        <item>الصالحية</item>
+        <item>سان استيفنو</item>
+        <item>شدس</item>
+        <item>السيوف</item>
+        <item>الشاطبى</item>
+        <item>سيدى بشر</item>
+        <item>سيدى جابر</item>
+        <item>سموحة</item>
+        <item>سبورتنج</item>
+        <item>استنلى</item>
+        <item>فيكتوريا</item>
+        <item>الورديان</item>
+        <item>زيزينيا</item>
+    </string-array>
+
+    <string-array name="subcountryegyptaswan">
+        <item>كل اسوان</item>
+        <item>ابو الريش</item>
+        <item>ابو سمبل</item>
+        <item>مدينة اسوان</item>
+        <item>البصيلية</item>
+        <item>دراو</item>
+        <item>ادفو</item>
+        <item>كلابشة</item>
+        <item>كوم امبو</item>
+        <item>نصر النوبة</item>
+        <item>الرديسية</item>
+        <item>صحارى</item>
+        <item>السباعية</item>
+    </string-array>
+
+    <string-array name="subcountryegyptasyut">
+        <item>كل اسيوط</item>
+        <item>أبنوب</item>
+        <item>ابو تيج</item>
+        <item>مدينة اسيوط</item>
+        <item>البدارى</item>
+        <item>ديروط</item>
+        <item>الفتح</item>
+        <item>الغنايم</item>
+        <item>منفلوط</item>
+        <item>اسيوط الجديدة</item>
+        <item>طيبة الجديدة</item>
+        <item>البدارى</item>
+        <item>سهل سليم</item>
+        <item>صدفا</item>
+    </string-array>
+
+    <string-array name="subcountryegyptbeheira">
+        <item>كل البحيرة</item>
+        <item>ابو حمص</item>
+        <item>ابو المطامير</item>
+        <item>دمنهور</item>
+        <item>الدلنجات</item>
+        <item>ادكو</item>
+        <item>ايتاى البارود</item>
+        <item>حوش عيسى</item>
+        <item>كفر الدوار</item>
+        <item>كوم حمادة</item>
+        <item>المحمودية</item>
+        <item>مركز بدر</item>
+        <item>النوبارية الجديدة</item>
+        <item>الرحمانية</item>
+        <item>رشيد</item>
+        <item>شبراخيت</item>
+        <item>وادى النطرون</item>
+    </string-array>
+
+    <string-array name="subcountryegyptbenisuef">
+        <item>كل بنى سويف</item>
+        <item>الفشن</item>
+        <item>الواسطى</item>
+        <item>ببا</item>
+        <item>مدينة بني سويف</item>
+        <item>اهناسيا</item>
+        <item>ناصر</item>
+        <item>بني سويف الجديدة</item>
+        <item>سمسطا</item>
+    </string-array>
+
+    <string-array name="subcountryegyptdamietta">
+        <item>كل دمياط</item>
+        <item>مدينة دمياط</item>
+        <item>عزبة البرج</item>
+        <item>فارسكور</item>
+        <item>كفر البطيخ</item>
+        <item>كفر سعد</item>
+        <item>مركز الروضة</item>
+        <item>ميت أبوغالب</item>
+        <item>دمياط الجديدة</item>
+        <item>راس البر</item>
+        <item>السرو</item>
+        <item>الزرقا</item>
+    </string-array>
+
+    <string-array name="subcountryegyptfayoum">
+        <item>كل الفيوم</item>
+        <item>أطسا</item>
+        <item>مدينة الفيوم</item>
+        <item>إبشواي</item>
+        <item>الفيوم الجديدة</item>
+        <item>سنورس</item>
+        <item>طامية</item>
+        <item>يوسف الصديق</item>
+    </string-array>
+
+    <string-array name="subcountryegyptgharbia">
+        <item>كل الغربية</item>
+        <item>بسيون</item>
+        <item>كفر الزيات</item>
+        <item>المحلة الكبرى</item>
+        <item>قطور</item>
+        <item>سمنود</item>
+        <item>السنطة</item>
+        <item>طنطا</item>
+        <item>زفتى</item>
+    </string-array>
+
+    <string-array name="subcountryegyptismailia">
+        <item>كل الاسماعلية</item>
+        <item>أبوصوير</item>
+        <item>فايد</item>
+        <item>مدينة الاسماعلية</item>
+        <item>القنطرة شرق</item>
+        <item>القنطرة غرب</item>
+        <item>القصاصين</item>
+        <item>التل الكبير</item>
+    </string-array>
+
+    <string-array name="subcountryegyptkafralsheikh">
+        <item>كل كفر الشيخ</item>
+        <item>بلطيم</item>
+        <item>بيلا</item>
+        <item>البرلس</item>
+        <item>دسوق</item>
+        <item>فوه</item>
+        <item>حمول</item>
+        <item>مدينة كفرالشيخ</item>
+        <item>مطوبس</item>
+        <item>قلين</item>
+        <item>الرياض</item>
+        <item>سيدى سالم</item>
+    </string-array>
+
+    <string-array name="subcountryegyptluxor">
+        <item>كل الاقصر</item>
+        <item>ارمنت</item>
+        <item>البياضية</item>
+        <item>إسنا</item>
+        <item>مدينة الاقصر</item>
+        <item>القرنه</item>
+        <item>الطود</item>
+        <item>الزينية</item>
+    </string-array>
+
+
+    <string-array name="subcountryegyptmatruh">
+        <item>كل مطروح</item>
+        <item>العلمين</item>
+        <item>براني</item>
+        <item>الضبعه</item>
+        <item>الحمام</item>
+        <item>مرسى مطروح</item>
+        <item>النجيلة</item>
+        <item>الساحل الشمالى</item>
+        <item>السلوم</item>
+        <item>سيوة</item>
+    </string-array>
+
+
+    <string-array name="subcountryegyptminya">
+        <item>كل المنيا</item>
+        <item>أبو قرقاص</item>
+        <item>العدوة</item>
+        <item>بنى مزار</item>
+        <item>دير مواس</item>
+        <item>مغاغه</item>
+        <item>ملاوى</item>
+        <item>مطاى</item>
+        <item>مدينة المنيا</item>
+        <item>المنيا الجديدة</item>
+        <item>سملوط</item>
+    </string-array>
+
+    <string-array name="subcountryegyptmonufia">
+        <item>كل المنوفية</item>
+        <item>اشمون</item>
+        <item>بجور</item>
+        <item>بركة السبع</item>
+        <item>منوف</item>
+        <item>قويسنا</item>
+        <item>السادات</item>
+        <item>سرس الليان</item>
+        <item>شبين الكوم</item>
+        <item>الشهداء</item>
+        <item>تلا</item>
+    </string-array>
+
+    <string-array name="subcountryegyptnewvalley">
+        <item>كل الوادى الجديد</item>
+        <item>بلاط</item>
+        <item>الداخلة</item>
+        <item>الفرافرة</item>
+        <item>الخارجة</item>
+        <item>مدينة موط</item>
+        <item>باريس</item>
+    </string-array>
+
+    <string-array name="subcountryegyptnorthsinai">
+        <item>كل شمال سيناء</item>
+        <item>العريش</item>
+        <item>بئر العبد</item>
+        <item>الحسنة</item>
+        <item>نخل</item>
+        <item>رفح</item>
+        <item>الشيخ زويد</item>
+    </string-array>
+
+    <string-array name="subcountryegyptportsaid">
+        <item>كل بور سعيد</item>
+        <item>حى العرب</item>
+        <item>حى الضواحي</item>
+        <item>حى الجنوب</item>
+        <item>حى المناخ</item>
+        <item>بور فؤاد</item>
+        <item>حى الشرق</item>
+        <item>حى الزهور</item>
+    </string-array>
+
+    <string-array name="subcountryegyptqalyubia">
+        <item>كل القليوبية</item>
+        <item>بهتيم</item>
+        <item>بنها</item>
+        <item>كفر شكر</item>
+        <item>الخنكة</item>
+        <item>الخصوص</item>
+        <item>مسطرد</item>
+        <item>قها</item>
+        <item>قليوب</item>
+        <item>القناطر الخيرية</item>
+        <item>شبين القناطر</item>
+        <item>شبرا الخيمة</item>
+        <item>طوخ</item>
+    </string-array>
+
+    <string-array name="subcountryegyptqena">
+        <item>كل قنا</item>
+        <item>أبو تشت</item>
+        <item>دشنا</item>
+        <item>فرشوط</item>
+        <item>قفط</item>
+        <item>نجع حمادى</item>
+        <item>نقادة</item>
+        <item>مدينه قنا</item>
+        <item>قوص</item>
+        <item>الوقف</item>
+    </string-array>
+
+    <string-array name="subcountryegyptredsea">
+        <item>كل البحر الاحمر</item>
+        <item>الجونة</item>
+        <item>حلايب _ شلاتين</item>
+        <item>الغردقة</item>
+        <item>مرسى علم</item>
+        <item>القصير</item>
+        <item>راس غارب</item>
+        <item>سفاجة</item>
+        <item>سهل حشيش</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsharqia">
+        <item>كل الشرقية</item>
+        <item>العاشر من رمضان</item>
+        <item>أبو حماد</item>
+        <item>أبو كبير</item>
+        <item>القنايات</item>
+        <item>أولاد صقر</item>
+        <item>بلبيس</item>
+        <item>ديرب نجم</item>
+        <item>فقوس</item>
+        <item>ههيا</item>
+        <item>الحسينية</item>
+        <item>الإبراهيمية</item>
+        <item>كفر صقر</item>
+        <item>مشتول السوق</item>
+        <item>منيا القمح</item>
+        <item>الصالحية الجديدة</item>
+        <item>القرين</item>
+        <item>الزقازيق</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsohag">
+        <item>كل سوهاج</item>
+        <item>أخميم</item>
+        <item>العسيرات</item>
+        <item>البلينا</item>
+        <item>جرجا</item>
+        <item>المراغة</item>
+        <item>مركز دار السلام</item>
+        <item>مركز جهينة</item>
+        <item>مركز سوهاج</item>
+        <item>المنشاة</item>
+        <item>سوهاج الجديدة</item>
+        <item>ساقلتة</item>
+        <item>طهطا</item>
+        <item>طما</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsouthsinai">
+        <item>كل جنوب سيناء</item>
+        <item>أبو رديس</item>
+        <item>أبو زنيمة</item>
+        <item>دهب</item>
+        <item>نويبع</item>
+        <item>راس سدر</item>
+        <item>شرم الشيخ</item>
+        <item>سانت كاترين</item>
+        <item>طابا</item>
+        <item>طور سيناء</item>
+    </string-array>
+
+    <string-array name="subcountryegyptsuez">
+        <item>كل السويس</item>
+        <item>العين السخنه</item>
+        <item>حى الاربعين</item>
+        <item>حي عتاقة</item>
+        <item>حى فيصل</item>
+        <item>حى الجناين</item>
+        <item>حى السويس</item>
+    </string-array>
+
+    <string-array name="countrygzaeir">
+        <item>كل الجزائر</item>
+        <item>وهران</item>
+        <item>قسنطينة</item>
+        <item>عنابة</item>
+        <item>البليدة</item>
+        <item>باتنة</item>
+        <item>الجلفة</item>
+        <item>سطيف</item>
+        <item>سيدي بلعباس</item>
+        <item>بسكرة</item>
+        <item>تبسة</item>
+        <item>الوادي</item>
+        <item>سكيكدة</item>
+        <item>تيارت</item>
+        <item>بجاية</item>
+        <item>تلمسان</item>
+        <item>ورقلة</item>
+        <item>بشار</item>
+        <item>مستغانم</item>
+        <item>سعيدة</item>
+        <item>الشلف</item>
+        <item>سوق اهراس</item>
+        <item>المدية</item>
+        <item>العلمة</item>
+        <item>تقورت</item>
+        <item>غرداية</item>
+        <item>الأغواط</item>
+        <item>المسيلة</item>
+        <item>جيجل</item>
+        <item>غليزان</item>
+        <item>قالمة</item>
+        <item>عين البيضاء</item>
+        <item>خنشلة</item>
+        <item>بوسعادة</item>
+        <item>معسكر</item>
+        <item>تندوف</item>
+        <item>تيزي وزو</item>
+        <item>برج بوعريريج</item>
+    </string-array>
+
+    <!--<string-array name="countryordon">-->
+        <!--<item>محافظة إربد</item>-->
+        <!--<item>محافظة الكرك</item>-->
+        <!--<item>محافظة عمان</item>-->
+        <!--<item>محافظة معان</item>-->
+        <!--<item>محافظة جرش</item>-->
+        <!--<item>محافظة العقبة</item>-->
+        <!--<item>محافظة الزرقاء</item>-->
+        <!--<item>محافظة مادبا</item>-->
+        <!--<item>محافظة البلقاء</item>-->
+        <!--<item>محافظة الطفيلة</item>-->
+        <!--<item>محافظة المفرق</item>-->
+        <!--<item>محافظة عجلون</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="countrylbnan">-->
+        <!--<item>بنت جبيل</item>-->
+        <!--<item>بعبدا</item>-->
+        <!--<item>بعلبك</item>-->
+        <!--<item>بيروت</item>-->
+        <!--<item>جزّين</item>-->
+        <!--<item>جونية</item>-->
+        <!--<item>الدمور</item>-->
+        <!--<item>دير القمر</item>-->
+        <!--<item>زحلة</item>-->
+        <!--<item>الشوف</item>-->
+        <!--<item>صور</item>-->
+        <!--<item>صيدا</item>-->
+        <!--<item>طرابلس</item>-->
+        <!--<item>عكار</item>-->
+        <!--<item>النبطيّة</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="countrymagreb">-->
+        <!--<item>الدار البيضاء</item>-->
+        <!--<item>الرباط</item>-->
+        <!--<item>فاس</item>-->
+        <!--<item>مراكش</item>-->
+        <!--<item>أكادير</item>-->
+        <!--<item>طنجة</item>-->
+        <!--<item>مكناس</item>-->
+        <!--<item>وجدة</item>-->
+        <!--<item>القنيطرة</item>-->
+        <!--<item>تطوان</item>-->
+        <!--<item>اسفى</item>-->
+        <!--<item>تمارة</item>-->
+        <!--<item>المحمدية</item>-->
+        <!--<item>العيون</item>-->
+        <!--<item>خريبكة</item>-->
+        <!--<item>بنى ملال</item>-->
+        <!--<item>الجديدة</item>-->
+        <!--<item>تازة</item>-->
+        <!--<item>الناظور</item>-->
+        <!--<item>سطات</item>-->
+        <!--<item>القصر الكبير</item>-->
+        <!--<item>العرانش</item>-->
+        <!--<item>الخميسات</item>-->
+        <!--<item>تزنيت</item>-->
+        <!--<item>كلميم</item>-->
+        <!--<item>برشيد</item>-->
+        <!--<item>وادى زم</item>-->
+        <!--<item>الفقيه بنصالح</item>-->
+        <!--<item>تاوريرت</item>-->
+        <!--<item>بركان</item>-->
+        <!--<item>سيدي سليمان</item>-->
+        <!--<item>الراشيدية</item>-->
+        <!--<item>سيدي قاسم</item>-->
+        <!--<item>خنيفرة</item>-->
+        <!--<item>الداخلة</item>-->
+        <!--<item>تيفلت</item>-->
+        <!--<item>الصويرة</item>-->
+        <!--<item>تارودانت</item>-->
+        <!--<item>قلعة السراغنة</item>-->
+        <!--<item>اولاد التايمة</item>-->
+        <!--<item>اليوسفية</item>-->
+        <!--<item>صفرو</item>-->
+        <!--<item>بنجرير</item>-->
+        <!--<item>طانطان</item>-->
+        <!--<item>بومالن دادس</item>-->
+        <!--<item>وزان</item>-->
+        <!--<item>جرسيف</item>-->
+        <!--<item>ورزازات</item>-->
+        <!--<item>الحسيمة</item>-->
+        <!--<item>الفنيدق</item>-->
+        <!--<item>سوق السبت أولاد النمة</item>-->
+        <!--<item>جرادة</item>-->
+        <!--<item>شفشاون</item>-->
+        <!--<item>السمارة</item>-->
+        <!--<item>بوجور</item>-->
+        <!--<item>زاكورة</item>-->
+        <!--<item>تاهلة</item>-->
+        <!--<item>سلا الجديدة</item>-->
+        <!--<item>بويزكارن</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="countrybahrin">-->
+        <!--<item>محافظة العاصمة</item>-->
+        <!--<item>محافظة المحرق</item>-->
+        <!--<item>المحافظة الشمالية</item>-->
+        <!--<item>المحافظة الجنوبية</item>-->
+    <!--</string-array>-->
+
+    <string-array name="countryoman">
+        <item>كل عمان</item>
+        <item>الزرقاء</item>
+        <item>إربد</item>
+        <item>الرصيفة</item>
+        <item>القويسمة</item>
+        <item>تلاع العلي</item>
+        <item>وادي السير</item>
+        <item>الجبيهة</item>
+        <item>خريبة السوق</item>
+        <item>سحاب</item>
+        <item>الرمثا</item>
+        <item>صويلح</item>
+        <item>العقبة</item>
+        <item>مخيم الزعتري</item>
+        <item>المفرق</item>
+        <item>مأدبا</item>
+        <item>السلط</item>
+        <item>أم قصير</item>
+        <item>الجيزة</item>
+        <item>مرج الحمام</item>
+        <item>أسكان أبو نصير</item>
+        <item>شفا بدران</item>
+        <item>مخيم البقعه</item>
+        <item>عين الباشا</item>
+        <item>ايدون</item>
+        <item>الضليل</item>
+        <item>جرش</item>
+        <item>الصريح</item>
+        <item>الهاشمية</item>
+        <item>معان</item>
+        <item>بيت راس</item>
+        <item>مخيم حطين</item>
+        <item>الحصن</item>
+        <item>مخيم الأزرق</item>
+        <item>الطرة</item>
+        <item>ناعور</item>
+        <item>الكرك</item>
+        <item>كفرنجة</item>
+        <item>دير ابي سعيد</item>
+        <item>النعيمة</item>
+        <item>الشجرة</item>
+        <item>الطفيلة</item>
+        <item>مؤتة</item>
+        <item>غور الصافي</item>
+        <item>عنجره</item>
+        <item>الشهيد عزمي</item>
+        <item>المشارع</item>
+        <item>حواره</item>
+        <item>كفر يوبا</item>
+        <item>كريمه</item>
+    </string-array>
+
+
+    <string-array name="countrysodia">
+        <item>كل السعودية</item>
+        <item>الرياض</item>
+        <item>جدة</item>
+        <item>مكة المكرمة</item>
+        <item>المدينة المنورة</item>
+        <item>سلطانة</item>
+        <item>الدمام</item>
+        <item>الطائف</item>
+        <item>تبوك</item>
+        <item>الخرج</item>
+        <item>بريدة</item>
+        <item>خميس مشيط</item>
+        <item>الهفوف</item>
+        <item>المبرز</item>
+        <item>حفر الباطن</item>
+        <item>حائل</item>
+        <item>نجران</item>
+        <item>الجبيل</item>
+        <item>أبها</item>
+        <item>ينبع</item>
+        <item>الخبر</item>
+        <item>عرار</item>
+        <item>سكاكا</item>
+        <item>جازان</item>
+        <item>القريات</item>
+        <item>الظهران</item>
+        <item>القطيف</item>
+        <item>الباحة</item>
+    </string-array>
+
+    <string-array name="conutryemarat">
+        <item>كل الامارات</item>
+        <item>دبي</item>
+        <item>أبوظبى</item>
+        <item>الشارقة</item>
+        <item>العين</item>
+        <item>عجمان</item>
+        <item>رأس الخيمة</item>
+        <item>الفجيرة</item>
+        <item>أم القيوين</item>
+        <item>خورفكان</item>
+        <item>دبا الفجيرة</item>
+        <item>دبا الحصن</item>
+        <item>الذيد</item>
+        <item>الروِيس</item>
+        <item>المُزيرعة</item>
+    </string-array>
+
+</resources>

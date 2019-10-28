@@ -1,5 +1,6 @@
 package com.example.yallabee3.adapt_hold.adapter;
 
+import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,6 +20,8 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 fragment = new CategeryFragment();
+//                fragment = new BlankFragment();
+
                 return fragment;
 
             case 1:
@@ -36,12 +39,23 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
     }
 
     public CharSequence getPageTitle(int position) {
+        String DeviceLang;
+        DeviceLang = Resources.getSystem().getConfiguration().locale.getLanguage();
         switch (position) {
             case 0:
-                return "Categories";
-
+                if(DeviceLang.equals("ar")) {
+                    return "الاقسام";
+                }
+                else {
+                    return "Categories";
+                }
             case 1:
-                return "Sponsored Ads";
+                if(DeviceLang.equals("ar")) {
+                    return "الاعلانات";
+                }
+                else {
+                    return "Sponsored Ads";
+                }
 
             default:
                 return null;

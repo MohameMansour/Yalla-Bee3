@@ -20,22 +20,24 @@
         app:popupTheme="@style/AppTheme.AppBarOverlay"
         app:theme="@style/AppTheme.AppBarOverlay">
 
-        <ImageView
-        android:id="@+id/tv_header_title"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:src="@drawable/logo" />
+        <!--<ImageView-->
+        <!--android:id="@+id/tv_header_title"-->
+        <!--android:layout_width="350dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:src="@drawable/yalaann" />-->
 
         <android.support.v7.widget.SearchView
             android:id="@+id/searchview"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_margin="8dp"
             android:background="@color/colorPrimary"
             android:iconifiedByDefault="false"
             app:queryHint="Search here" />
+
+
 
         <!--<TextView-->
             <!--android:id="@+id/texttoolbar"-->
@@ -68,7 +70,6 @@
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

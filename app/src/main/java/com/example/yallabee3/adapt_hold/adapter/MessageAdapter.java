@@ -58,8 +58,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageHolder> {
     public void onBindViewHolder(@NonNull MessageHolder holder, int i) {
 
         String message = messages.get(i).getMessage();
+        String date = messages.get(i).getDate();
 
         holder.messageTextView.setText(message);
+        holder.dateTextView.setText(date);
 
         if (messages.get(i) != null) {
             Picasso.get()

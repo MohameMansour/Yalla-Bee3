@@ -15,11 +15,13 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/user_img" />
+            android:src="@drawable/user_img"
+            />
 
         <TextView
             android:id="@+id/anotherprofile_username_textview"
@@ -43,27 +45,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/anotherprofile_username_textview" />
 
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/anotherprofile_email_textview" />
+
+
         <TextView
             android:id="@+id/anotherprofile_products_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:gravity="center"
-            android:text="Products"
+            android:text="@string/products"
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anotherprofile_email_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/view" />
 
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/anotherprofile_products_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anotherprofile_products_textview"/>
+            app:layout_constraintTop_toBottomOf="@+id/anotherprofile_products_textview" />
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>
